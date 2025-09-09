@@ -2,9 +2,8 @@ import { navbar } from "vuepress-theme-hope";
 
 export const enNavbar = navbar([
   "/",
-  "/demo/",
   {
-    text: "Posts",
+    text: "記事",
     icon: "pen-to-square",
     prefix: "/posts/",
     children: [
@@ -43,10 +42,5 @@ export const enNavbar = navbar([
       "tomato",
       "strawberry",
     ],
-  },
-  {
-    text: "V2 Docs",
-    icon: "book",
-    link: "https://theme-hope.vuejs.press/",
-  },
+  }
 ]);

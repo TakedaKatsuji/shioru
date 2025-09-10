@@ -21,13 +21,13 @@ export default hopeTheme({
     medias: {
       GitHub: "https://example.com",
       Gmail: "mailto:info@example.com",
-      VuePressThemeHope: {
-        icon: "https://theme-hope-assets.vuejs.press/logo.svg",
-        link: "https://theme-hope.vuejs.press",
-      },
       Qiita: {
-        icon: "/assets/icon/qiita-icon.png",
-        link: "https://theme-hope.vuejs.press",
+        icon: "https://takedakatsuji.github.io/shioru/assets/icon/qiita-icon.png",
+        link: "https://qiita.com/katsujitakeda",
+      },
+      researchmap: {
+        icon: "https://takedakatsuji.github.io/shioru/assets/icon/research-icon.png",
+        link: "https://researchmap.jp/katsujitakeda",
       }
     }
   },

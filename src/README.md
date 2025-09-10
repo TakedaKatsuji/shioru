@@ -2,9 +2,9 @@
 home: true
 layout: Blog
 icon: house
-title: Blog Home
+title: Home
 heroImage: https://theme-hope-assets.vuejs.press/logo.svg
-heroText: The name of your blog
+heroText: 栞る数理統計
 tagline: You can put your slogan here
 heroFullScreen: true
 projects:
@@ -28,15 +28,6 @@ projects:
     desc: Detailed description of the article
     link: https://link.to.your.article
 
-  - icon: user-group
-    name: friend name
-    desc: Detailed description of friend
-    link: https://link.to.your.friend
-
-  - icon: https://theme-hope-assets.vuejs.press/logo.svg
-    name: custom item
-    desc: Detailed description of this custom item
-    link: https://link.to.your.friend
 
 footer: customize your footer text
 ---

@@ -60,7 +60,6 @@ export default hopeTheme({
     "/zh/": {
       // navbar
       navbar: zhNavbar,
-
       // sidebar
       sidebar: zhSidebar,
 
@@ -132,7 +131,6 @@ export default hopeTheme({
 
     // uncomment these if you need TeX support
     math: {
-      // or install mathjax-full before enabling it
       type: "mathjax",
     },
 

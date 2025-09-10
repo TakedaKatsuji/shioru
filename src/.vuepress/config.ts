@@ -8,13 +8,8 @@ export default defineUserConfig({
   locales: {
     "/": {
       lang: "ja-JP",
-      title: "Blog Demo",
+      title: "栞る数理統計",
       description: "A blog demo for vuepress-theme-hope",
-    },
-    "/zh/": {
-      lang: "zh-CN",
-      title: "博客演示",
-      description: "vuepress-theme-hope 的博客演示",
     },
   },
 

@@ -11,7 +11,7 @@ export default hopeTheme({
     url: "https://mister-hope.com",
   },
 
-  logo: "/https://shioru.jp/logo.png",
+  logo: "/sub-logo.png",
 
   repo: "vuepress-theme-hope/vuepress-theme-hope",
 
@@ -22,11 +22,11 @@ export default hopeTheme({
       GitHub: "https://example.com",
       Gmail: "mailto:info@example.com",
       Qiita: {
-        icon: "https://takedakatsuji.github.io/shioru/assets/icon/qiita-icon.png",
+        icon: "https://shioru.jp/assets/icon/qiita-icon.png",
         link: "https://qiita.com/katsujitakeda",
       },
       researchmap: {
-        icon: "https://takedakatsuji.github.io/shioru/assets/icon/research-icon.png",
+        icon: "https://shioru.jp/assets/icon/research-icon.png",
         link: "https://researchmap.jp/katsujitakeda",
       }
     }

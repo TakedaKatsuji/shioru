@@ -13,10 +13,9 @@ export default defineUserConfig({
     },
   },
 
+  head: [["link", { rel: "icon", href: "/favicon.png?v=1" }]],
+
   theme,
-  // head: [
-  //   ["link", { rel: "icon", href: "/logo.png" }],  // faviconの指定
-  // ],
   // Enable it with pwa
   // shouldPrefetch: false,
 });

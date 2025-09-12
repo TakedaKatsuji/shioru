@@ -3,9 +3,13 @@ home: true
 layout: Blog
 icon: house
 title: Home
-heroImage: https://theme-hope-assets.vuejs.press/logo.svg
+heroImage: /assets/icon/icon3.png
+bgImage: /assets/images/shioru-bg.jpg
+bgImageStyle:
+  background-color: "rgba(0,0,0,0.3)"   # 半透明の黒を重ねる
+  background-blend-mode: multiply       # 画像と合成
 heroText: 栞る数理統計
-tagline: You can put your slogan here
+tagline: 栞を挟み、知を紡ぐ
 heroFullScreen: true
 projects:
   - icon: folder-open
@@ -29,11 +33,5 @@ projects:
     link: https://link.to.your.article
 
 
-footer: customize your footer text
+footer: © 2025 栞る数理統計
 ---
-
-This is a blog home page demo.
-
-To use this layout, you should set both `layout: Blog` and `home: true` in the page front matter.
-
-For related configuration docs, please see [blog homepage](https://theme-hope.vuejs.press/guide/blog/home.html).

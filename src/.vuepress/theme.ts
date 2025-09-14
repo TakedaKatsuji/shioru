@@ -31,6 +31,7 @@ export default hopeTheme({
       }
     }
   },
+  editLink: false,
 
   locales: {
     "/": {
@@ -49,9 +50,6 @@ export default hopeTheme({
         intro: "/intro.html",
       },
 
-      metaLocales: {
-        editLink: "Edit this page on GitHub",
-      },
     }
   },
 

@@ -1,8 +1,16 @@
 ---
-icon: circle-info
-cover: /assets/images/cover3.jpg
+icon: user
+cover: /assets/images/shioru-bg.jpg
+data: 2025-09-14
 ---
 
-# Intro Page
+# 筆者について
+こんにちは、「栞る数理統計」の管理者のTakeda Katsujiと申します。
+現在は企業で医療AIエンジニアとして働いています。
 
-Place your introduction and profile here.
+簡単に自己紹介すると東京理科大学で物理を専攻し、卒業後4年間数学の教員をしていました。
+その中で自分自身も新しい学びを得たいと考え、機械学習エンジニアへ転職。
+機械学習を学ぶ過程で数理統計学にのめりこみ、統計検定１級を取得しました。（成績優秀者）
+
+このブログは統計検定１級の解説や数理統計学の学びを、学びの足跡と道標として残すために作成しました。
+ほぼ私のためのブログが誰かの一助となれば幸いです。

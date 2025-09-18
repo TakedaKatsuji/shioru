@@ -1,46 +1,29 @@
 import { navbar } from "vuepress-theme-hope";
+import type { NavbarOptions } from "vuepress-theme-hope";
 
-export const enNavbar = navbar([
+export const enNavbar: NavbarOptions = navbar([
   "/",
   {
     text: "記事",
-    icon: "pen-to-square",
+    icon: "meteor-icons:folder",
     prefix: "/posts/",
     children: [
       {
-        text: "Apple",
-        icon: "pen-to-square",
-        prefix: "apple/",
+        text: "統計検定1級-数理統計",
+        icon: "meteor-icons:folder",
+        prefix: "統計検定1級-数理統計/",
         children: [
-          { text: "Apple1", icon: "pen-to-square", link: "1" },
-          { text: "Apple2", icon: "pen-to-square", link: "2" },
-          "3",
-          "4",
+          { text: "2013", icon: "meteor-icons:folder",link: "2013/1.md"},
         ],
       },
       {
-        text: "Banana",
-        icon: "pen-to-square",
-        prefix: "banana/",
+        text: "確率分布",
+        icon: "meteor-icons:folder",
+        prefix: "確率分布/",
         children: [
-          {
-            text: "Banana 1",
-            icon: "pen-to-square",
-            link: "1",
-          },
-          {
-            text: "Banana 2",
-            icon: "pen-to-square",
-            link: "2",
-          },
-          "3",
-          "4",
+          { text: "一様分布", icon: "meteor-icons:folder",link: "一様分布.md"},
         ],
       },
-      { text: "Cherry", icon: "pen-to-square", link: "cherry" },
-      { text: "Dragon Fruit", icon: "pen-to-square", link: "dragonfruit" },
-      "tomato",
-      "strawberry",
     ],
-  }
+  },
 ]);

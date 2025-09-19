@@ -97,7 +97,29 @@ $$
 $$
 \mathbb{E}[X] = \frac{a+b}{2}
 $$
+
+これは**区間の中点**を表しています。
 :::
+
+::: details 導出の手順はこちら
+::: tip 導出
+確率変数 $X \sim \mathrm{Uniform}(a,b)$ の場合，
+
+$$
+\mathbb{E}[X] = \int_a^b x \cdot f(x)\,dx
+= \int_a^b x \cdot \frac{1}{b-a}\,dx
+$$
+
+積分すると，
+
+$$
+\mathbb{E}[X] = \frac{1}{b-a}\left[\frac{x^2}{2}\right]_a^b
+= \frac{1}{b-a}\cdot \frac{b^2-a^2}{2}
+= \frac{a+b}{2}.
+$$
+:::
+
+
 ## 4. 分散
 ::: info 分散
 $$

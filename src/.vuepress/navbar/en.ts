@@ -11,7 +11,7 @@ export const enNavbar: NavbarOptions = navbar([
       {
         text: "統計検定1級-数理統計",
         icon: "meteor-icons:folder",
-        prefix: "統計検定1級-数理統計/",
+        prefix: "grade1_1/",
         children: [
           { text: "2013", icon: "meteor-icons:folder",link: "2013/1.md"},
         ],
@@ -19,9 +19,9 @@ export const enNavbar: NavbarOptions = navbar([
       {
         text: "確率分布",
         icon: "meteor-icons:folder",
-        prefix: "確率分布/",
+        prefix: "probability_distribution/",
         children: [
-          { text: "一様分布", icon: "meteor-icons:folder",link: "一様分布.md"},
+          { text: "一様分布", icon: "meteor-icons:folder",link: "uniform.md"},
         ],
       },
     ],

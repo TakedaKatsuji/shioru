@@ -4,7 +4,7 @@ category:
   - 統計数理
   - 確率分布
 tag:
-  - "一様分布"
+  - 一様分布
   - 確率密度関数
   - 連続型
 ---
@@ -17,7 +17,6 @@ tag:
 
 ::: info 確率密度関数 (PDF)
 区間 $[a,b]$ の一様分布の確率密度関数は次の通り：
-
 $$
 f(x) =
 \begin{cases}
@@ -26,6 +25,14 @@ f(x) =
 \end{cases}
 $$
 :::
+
+**確率密関数のグラフ**
+
+<div style="display: flex; gap: 10px; justify-content: center;">
+  <img src="/assets/images/probability_distribution/uniform/pdf.png" style="max-width: 48%; height: auto;">
+  <img src="/assets/images/probability_distribution/uniform/pdf.gif" style="max-width: 48%; height: auto;">
+</div>
+
 
 ## 2. 累積分布関数
 ::: info 累積分布関数 (CDF)

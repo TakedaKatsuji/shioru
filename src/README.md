@@ -10,7 +10,7 @@ bgImageStyle:
   background-blend-mode: multiply       # 画像と合成
 heroText: 栞る数理統計
 tagline: 栞を挟み、知を紡ぐ
-heroFullScreen: true
+heroFullScreen: false
 projects:
   - icon: folder-open
     name: project name

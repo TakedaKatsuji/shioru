@@ -33,7 +33,6 @@ $$
   <img src="/assets/images/probability_distribution/uniform/pdf.gif" style="max-width: 48%; height: auto;">
 </div>
 
-
 ## 2. 累積分布関数
 ::: info 累積分布関数 (CDF)
 $$
@@ -45,6 +44,54 @@ F(x) =
 \end{cases}
 $$
 :::
+
+**累積分布関数のグラフ**
+<div style="display: flex; gap: 10px; justify-content: center;">
+  <img src="/assets/images/probability_distribution/uniform/cdf.png" style="max-width: 70%; height: auto;">
+</div>
+
+::: details **導出の手順はこちら**
+::: tip 導出
+累積分布関数は
+
+$$
+F(x) = P(X \leq x) = \int_{-\infty}^x f(t)\,dt
+$$
+
+で定義される。区間 $[a,b]$ の一様分布について場合分けすると：
+
+1. **$x < a$ のとき**
+
+$$
+F(x) = \int_{-\infty}^x f(t)\,dt = 0
+$$
+
+2. **$a \leq x \leq b$ のとき**
+
+$$
+\begin{align}
+F(x) &= \int_a^x \frac{1}{b-a}\,dt \\[6pt]
+&= \frac{x-a}{b-a}
+\end{align}
+$$
+
+3. **$x > b$ のとき**
+
+$$
+F(x) = \int_{-\infty}^x f(t)\,dt = 1
+$$
+
+**結果**
+$$
+F(x) =
+\begin{cases}
+0, & x < a, \\
+\dfrac{x-a}{b-a}, & a \le x \le b, \\
+1, & x > b.
+\end{cases}
+$$
+:::
+
 ## 3. 期待値
 ::: info 期待値
 $$

@@ -53,3 +53,21 @@ p {
   padding-left: 0.8em;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
+
+.hint-container.details > summary {
+  background: #f9fbfe;
+  color: #2d4f7c;
+  font-weight: 600;
+  padding: 1em 2.5em;
+  margin: 0.8em 0;
+  border: 1px solid #d4dce7;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: background 0.6s ease, color 0.6s ease;
+}
+
+.hint-container.details > summary:hover {
+  background: #2d4f7c;  /* 元の文字色を背景に */
+  color: #f9fbfe;       /* 元の背景を文字色に */
+}

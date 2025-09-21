@@ -6,6 +6,8 @@ category:
 tag:
   - 共分散
   - 期待値
+  - 分散共分散行列
+  - 独立
 icon: meteor-icons:feather
 ---
 

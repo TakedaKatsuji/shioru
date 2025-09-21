@@ -12,26 +12,21 @@ heroText: 栞る数理統計
 tagline: 栞を挟み、知を紡ぐ
 heroFullScreen: false
 projects:
-  - icon: folder-open
-    name: project name
-    desc: project detailed description
-    link: https://your.project.link
 
-  - icon: link
-    name: link name
-    desc: link detailed description
-    link: https://link.address
+  - icon: meteor-icons:folder 
+    name: 確率分布まとめ
+    desc: 各種分布の定義・性質・例題の整理
+    link: /posts/probability_distribution/
 
-  - icon: book
-    name: book name
-    desc: Detailed description of the book
-    link: https://link.to.your.book
+  - icon: meteor-icons:folder 
+    name: 多次元分布まとめ
+    desc: 多次元正規分布や共分散行列の解説
+    link: /posts/multivariate_distribution/
 
-  - icon: newspaper
-    name: article name
-    desc: Detailed description of the article
-    link: https://link.to.your.article
-
+  - icon: pen-to-square
+    name: 統計検定1級 過去問解説
+    desc: 分野別の解法・公式の解説
+    link: /posts/grade1_1/
 
 footer: © 2025 栞る数理統計
 ---

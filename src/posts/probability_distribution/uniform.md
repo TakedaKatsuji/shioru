@@ -1,5 +1,6 @@
 ---
 date: 2025-09-16
+icon: meteor-icons:feather
 category:
   - 統計数理
   - 確率分布

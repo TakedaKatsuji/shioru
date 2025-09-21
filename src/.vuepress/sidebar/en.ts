@@ -22,6 +22,13 @@ export const enSidebar = sidebar({
           collapsible: true,
           children: "structure"
         },
+        {
+          text: "多次元分布",
+          icon: "meteor-icons:folder",
+          prefix: "multivariate_distribution/",
+          collapsible: true,
+          children: "structure"
+        },
       ],
     },
     "intro"

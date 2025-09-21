@@ -21,7 +21,15 @@ export const enNavbar: NavbarOptions = navbar([
         icon: "meteor-icons:folder",
         prefix: "probability_distribution/",
         children: [
-          { text: "一様分布", icon: "meteor-icons:folder",link: "uniform.md"},
+          { text: "一様分布", icon: "meteor-icons:feather",link: "uniform.md"},
+        ],
+      },
+      {
+        text: "多次元分布",
+        icon: "meteor-icons:folder",
+        prefix: "multivariate_distribution/",
+        children: [
+          { text: "共分散", icon: "meteor-icons:feather",link: "covariance.md"},
         ],
       },
     ],

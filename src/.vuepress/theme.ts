@@ -134,7 +134,6 @@ export default hopeTheme({
 
   plugins: {
     blog: true,
-    // readingTime: false,
 
     components: {
       components: ["Badge", "VPCard"],

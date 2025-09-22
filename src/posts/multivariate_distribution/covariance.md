@@ -11,7 +11,7 @@ tag:
 icon: meteor-icons:feather
 ---
 
-# 共分散の性質
+# 共分散の性質まとめ
 
 ## 共分散の定義
 ::: info  def

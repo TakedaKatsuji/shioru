@@ -14,12 +14,12 @@ heroFullScreen: false
 projects:
 
   - icon: meteor-icons:folder 
-    name: 確率分布まとめ
+    name: 確率分布
     desc: 各種分布の定義・性質・例題の整理
     link: /posts/probability_distribution/
 
   - icon: meteor-icons:folder 
-    name: 多次元分布まとめ
+    name: 多次元分布
     desc: 多次元正規分布や共分散行列の解説
     link: /posts/multivariate_distribution/
 

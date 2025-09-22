@@ -40,20 +40,39 @@ p {
   }
 }
 
-/* 中見出し */
-.header-anchor {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #2d4f7c; /* 同系統の濃紺 */
-
-  margin-top: 0.8em;
-  margin-bottom: 0.6em;
-
-  border-left: 4px solid #94a3b8; /* 大見出しと揃えた色味 */
-  padding-left: 0.8em;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+/* h2 */
+h2 span {
+  display: inline-block;
+  padding: 0.4em 1em;                 /* h3よりやや広め */
+  background: #f9fbfe;                /* 単色で落ち着かせる */
+  border-left: 4px solid #3c66a8;     /* h3と同じ太さ */
+  border-radius: 6px;
+  color: #2d4f7c;
+  font-weight: 700;                   /* h3より少し強調 */
+  font-size: 1.4rem;                  /* h3より大きいが控えめ */
 }
 
+
+/* h3 以下は段階的に小さく */
+h3 span {
+  display: inline-block;
+  padding: 0.3em 0.8em;
+  background: linear-gradient(135deg, #f9fbfe, #e6ecf5);
+  border-left: 4px solid #3c66a8;
+  border-radius: 6px;
+  color: #2d4f7c;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+
+
+h4 span {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2d4f7c;
+  margin-top: 0.6em;
+  margin-bottom: 0.4em;
+}
 .hint-container.details > summary {
   background: #f9fbfe;
   color: #2d4f7c;

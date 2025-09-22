@@ -9,9 +9,36 @@ tag:
   - 正規分布
   - 確率密度関数
   - 連続型
+
 ---
 
+
 # 標準正規分布の性質
+
+この記事では標準正規分布の $t$ 次モーメントを既知とします。
+
+詳しく知りたい方は[➡標準正規分布の $t$ 次モーメント](/posts/probability_distribution/standard_normal2.md)をご覧ください。
+
+正規分布のうち，平均が $0$，分散が $1$ の場合を特に **標準正規分布** といいます．  
+
+::: info 定義
+一般の正規分布 $X \sim \mathcal{N}(\mu, \sigma^2)$ に対し，  
+変数変換
+$$
+Z = \frac{X - \mu}{\sigma}
+$$
+を行うと，
+$$
+Z \sim \mathcal{N}(0,1)
+$$
+となる．
+:::
+
+正規分布の多くの性質は，この標準化によって **標準正規分布の性質から導出** できます．  
+
+そのため，標準正規分布に関する積分公式や累積分布関数を整理しておくと，他の正規分布の性質も容易に導けます．
+
+
 
 ## 1. 確率密度関数
 ::: info 確率密度関数 (PDF)
@@ -23,7 +50,11 @@ $$
 
 **確率密度関数のグラフ**
 
----
+<div style="display: flex; gap: 10px; justify-content: center;">
+  <img src="/assets/images/probability_distribution/standard_normal/pdf.png" style="max-width: 80%; height: auto;">
+</div>
+
+
 
 ## 2. 累積分布関数
 ::: info 累積分布関数 (CDF)
@@ -42,7 +73,10 @@ $$
 
 **累積分布関数のグラフ**
 
----
+<div style="display: flex; gap: 10px; justify-content: center;">
+  <img src="/assets/images/probability_distribution/standard_normal/cdf.png" style="max-width: 80%; height: auto;">
+</div>
+
 
 ## 3. 期待値
 ::: info 期待値
@@ -62,13 +96,13 @@ z \cdot \frac{1}{\sqrt{2\pi}}
 \end{align}
 $$
 
- integrand は奇関数なので，
+被積分関数は奇関数なので，
 $$
 \mathbb{E}[Z] = 0
 $$
 :::
 
----
+
 
 ## 4. 分散
 ::: info 分散
@@ -100,7 +134,7 @@ $$
 $$
 :::
 
----
+
 
 ## 5. 積率母関数
 ::: info 積率母関数 (MGF)
@@ -126,8 +160,8 @@ $$
 
 よって
 $$
-M_Z(t) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^\infty
-\exp\!\left(-\frac{(z-t)^2}{2}\right) dz \cdot e^{t^2/2}
+M_Z(t) =  \int_{-\infty}^\infty
+\frac{1}{\sqrt{2\pi}} \exp\!\left(-\frac{(z-t)^2}{2}\right) dz \cdot e^{t^2/2}
 $$
 
 積分は正規分布の全積分で $=1$ だから
@@ -136,7 +170,7 @@ M_Z(t) = e^{t^2/2}
 $$
 :::
 
----
+
 
 ## 6. 特性関数
 ::: info 特性関数 (CF)

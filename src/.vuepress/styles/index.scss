@@ -90,3 +90,12 @@ h4 span {
   background: #2d4f7c;  /* 元の文字色を背景に */
   color: #f9fbfe;       /* 元の背景を文字色に */
 }
+
+mark {
+  background: linear-gradient(
+    transparent 60%,   /* 上は透明 */
+    #fff9a8 60%        /* 下は薄い黄色 */
+  );
+  border-radius: 4px;  /* 角丸 */
+  padding: 0 2px;      /* 左右余白 */
+}

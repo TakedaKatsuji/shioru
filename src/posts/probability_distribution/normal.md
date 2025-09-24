@@ -12,6 +12,49 @@ tag:
 
 # 正規分布の性質
 
+正規分布は **線形変換で閉じている分布** です.  
+$$
+Z \sim \mathcal{N}(0, 1)
+$$
+のとき, 変数変換 $X = \mu + \sigma Z$ により  
+$$
+X \sim \mathcal{N}(\mu, \sigma^2)
+$$
+が成り立ちます.  
+
+したがって正規分布の多くの性質は ==標準正規分布の変数変換== によって導出可能です（計算が容易になる）.
+
+---
+
+::: details 正規分布が線形変換で閉じている証明
+標準正規分布 $Z \sim \mathcal{N}(0,1)$ の確率密度関数は
+$$
+f_Z(z) = \frac{1}{\sqrt{2\pi}} e^{-z^2/2}
+$$
+
+変数変換 $X = \mu + \sigma Z$ を考える.  
+
+逆変換は $z = \tfrac{x-\mu}{\sigma}$ で，ヤコビアンは $\tfrac{dz}{dx} = \tfrac{1}{\sigma}$.  
+
+したがって $X$ の密度関数は
+$$
+\begin{align}
+f_X(x) &= f_Z\!\left(\frac{x-\mu}{\sigma}\right) \cdot \frac{1}{|\sigma|} \\[6pt]
+&= \frac{1}{\sqrt{2\pi}} 
+\exp\!\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)\cdot \frac{1}{\sigma} \\[6pt]
+&= \frac{1}{\sqrt{2\pi\sigma^2}} 
+\exp\!\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)
+\end{align}
+$$
+
+これは平均 $\mu$, 分散 $\sigma^2$ の正規分布 $\mathcal{N}(\mu,\sigma^2)$ の確率密度関数に一致する.  
+:::
+
+---
+
+はじめに 👉 [標準正規分布の性質](/posts/probability_distribution/standard_normal.md) を確認することをおすすめします.
+
+
 ## 1. 確率密度関数
 ::: info 確率密度関数 (PDF)
 平均 $\mu$, 分散 $\sigma^2$ の正規分布 $X \sim \mathcal{N}(\mu,\sigma^2)$ の確率密度関数は  
@@ -192,84 +235,45 @@ $$
 
 ::: details 導出の手順はこちら
 ::: tip 導出
-正規分布 $X \sim \mathcal{N}(\mu,\sigma^2)$ の確率密度関数を使う：
+標準正規分布 $Z \sim \mathcal{N}(0,1)$ の[積率母関数](/posts/probability_distribution/standard_normal1.html#_5-積率母関数)は
 
 $$
-f(x) = \frac{1}{\sqrt{2\pi\sigma^2}}
-\exp\!\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)
+M_Z(s) = \mathbb{E}[e^{sZ}] = \exp\!\left(\tfrac{1}{2}s^2\right)
 $$
 
-積率母関数は
+である.  
+
+いま $X \sim \mathcal{N}(\mu,\sigma^2)$ を  
 $$
-M_X(t) = \int_{-\infty}^\infty e^{tx} f(x)\,dx
+X = \mu + \sigma Z
+$$
+と標準正規分布 $Z$ を使って表す.  
+
+すると
+$$
+M_X(t) = \mathbb{E}[e^{tX}]
+= \mathbb{E}[e^{t(\mu + \sigma Z)}]
 $$
 
-これを代入して
+指数を分けると
 $$
-\begin{align}
-M_X(t) &= \int_{-\infty}^\infty 
-e^{tx} \cdot \frac{1}{\sqrt{2\pi\sigma^2}}
-\exp\!\left(-\frac{(x-\mu)^2}{2\sigma^2}\right) dx \\[6pt]
-&= \frac{1}{\sqrt{2\pi\sigma^2}}
-\int_{-\infty}^\infty 
-\exp\!\left(-\frac{(x-\mu)^2}{2\sigma^2} + tx\right) dx
-\end{align}
+M_X(t) = e^{\mu t}\,\mathbb{E}[e^{(\sigma t)Z}]
 $$
 
-指数部を整理する.  
-まず $tx$ を $\mu t$ と $(x-\mu)$ に分解：
+ここで $\mathbb{E}[e^{(\sigma t)Z}]$ は $Z$ のMGFを $s=\sigma t$ とおいたものだから
 $$
-tx = t\mu + t(x-\mu)
-$$
-
-したがって
-$$
--\frac{(x-\mu)^2}{2\sigma^2} + tx 
-= -\frac{(x-\mu)^2}{2\sigma^2} + t(x-\mu) + \mu t
-$$
-
-ここで $(x-\mu)$ を変数とし，平方完成を行う：
-$$
--\frac{1}{2\sigma^2}(x-\mu)^2 + t(x-\mu) 
-= -\frac{1}{2\sigma^2}\Big[(x-\mu)^2 - 2\sigma^2 t (x-\mu)\Big]
-$$
-
-$$
-= -\frac{1}{2\sigma^2}\Big[(x-\mu - \sigma^2 t)^2 - (\sigma^2 t)^2\Big]
+\mathbb{E}[e^{(\sigma t)Z}] = M_Z(\sigma t) = \exp\!\left(\tfrac{1}{2}(\sigma t)^2\right)
 $$
 
 したがって
 $$
--\frac{(x-\mu)^2}{2\sigma^2} + tx
-= -\frac{(x-\mu - \sigma^2 t)^2}{2\sigma^2}
-+ \frac{\sigma^2 t^2}{2} + \mu t
+M_X(t) = e^{\mu t}\,\exp\!\left(\tfrac{1}{2}\sigma^2 t^2\right)
+= \exp\!\left(\mu t + \tfrac{1}{2}\sigma^2 t^2\right)
 $$
 
-積分に戻すと
-$$
-\begin{align}
-M_X(t) &= \frac{1}{\sqrt{2\pi\sigma^2}}
-\int_{-\infty}^\infty 
-\exp\!\left(-\frac{(x-\mu - \sigma^2 t)^2}{2\sigma^2}\right)
-\exp\!\left(\frac{\sigma^2 t^2}{2} + \mu t\right) dx
-\end{align}
-$$
-
-ここで $\exp\!\left(\frac{\sigma^2 t^2}{2} + \mu t\right)$ は $x$ に依存しないので外に出す：
-$$
-M_X(t) = \exp\!\left(\mu t + \tfrac{1}{2}\sigma^2 t^2\right)
-\cdot \frac{1}{\sqrt{2\pi\sigma^2}}
-\int_{-\infty}^\infty 
-\exp\!\left(-\frac{(x-\mu - \sigma^2 t)^2}{2\sigma^2}\right) dx
-$$
-
-右側の積分は正規分布の積分で $=1$ となる.  
-
-したがって
-$$
-M_X(t) = \exp\!\left(\mu t + \tfrac{1}{2}\sigma^2 t^2\right)
-$$
+これで導出が完了する.
 :::
+
 
 ---
 

@@ -34,7 +34,7 @@ export const enNavbar: NavbarOptions = navbar([
         children: [
           { text: "共分散", icon: "meteor-icons:feather",link: "covariance.md"},
           { text: "相関係数", icon: "meteor-icons:feather",link: "correlation_coefficient.md"},
-          { text: "正規分布の条件付き分布", icon: "meteor-icons:feather",link: "normal_cpd.md"},
+          { text: "2次元正規分布の条件付き分布", icon: "meteor-icons:feather",link: "normal_cpd.md"},
         ],
       },
     ],

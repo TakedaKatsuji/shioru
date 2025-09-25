@@ -11,7 +11,7 @@ tag:
 ---
 
 # 相関係数の性質まとめ
-
+::: expl
 相関係数とは二つ以上の確率変数の間にある関係の強弱を表す指標で、$-1 \leq \rho \leq 1$ を満たします.
 
 1に近づけば==正の相関==があるといい、確率変数 $X$ が増えれば $Y$ も増える関係にあります.
@@ -27,10 +27,10 @@ tag:
 <div style="display: flex; gap: 10px; justify-content: center;">
   <img src="/assets/images/multivariate_distribution/correlation_coefficient/correlation_scatter_plots.png" style="max-width: 100%; height: auto;">
 </div>
-
+:::
 
 ## 相関係数の定義
-::: info 定義
+::: def 定義
 確率変数 $X, Y$ の**ピアソンの積率相関係数**は次で定義されます.
 
 $$
@@ -60,6 +60,7 @@ $$
 ---
 
 ## サンプル相関係数
+::: def
 有限のデータ $(x_i, y_i) \; (i=1,\dots,n)$ から計算する場合，**標本相関係数**は
 
 $$
@@ -71,7 +72,7 @@ $$
 
 ここで $\bar{x}, \bar{y}$ は標本平均です.
 
----
+:::
 
 ## 例題
 
@@ -81,6 +82,7 @@ $$
 $X \sim \mathrm{Uniform}(0,1)$ とし，$Y = 1 - X$ のとき，確率変数 $X, Y$ の相関係数を求めよ.
 
 ::: details 解答
+::: ans
 まず，$X$ の基本的な統計量は
 
 $$
@@ -157,5 +159,4 @@ $$
 $$
 
 計算量が一気に減り，**線形性を使うのが有効**であることが分かります.
-
 :::

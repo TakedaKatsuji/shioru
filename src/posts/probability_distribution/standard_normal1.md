@@ -14,14 +14,15 @@ tag:
 
 
 # 標準正規分布の性質
-
+::: expl
 この記事では標準正規分布の $t$ 次モーメントを既知とします。
 
 詳しく知りたい方は[➡標準正規分布の $t$ 次モーメント](/posts/probability_distribution/standard_normal2.md)をご覧ください。
 
 正規分布のうち，平均が $0$，分散が $1$ の場合を特に **標準正規分布** といいます．  
+:::
 
-::: info 定義
+::: def 定義
 一般の正規分布 $X \sim \mathcal{N}(\mu, \sigma^2)$ に対し，  
 変数変換
 $$
@@ -40,7 +41,7 @@ $$
 
 
 ## 1. 確率密度関数
-::: info 確率密度関数 (PDF)
+::: def 確率密度関数 (PDF)
 標準正規分布 $Z \sim \mathcal{N}(0,1)$ の確率密度関数は  
 $$
 f(z) = \frac{1}{\sqrt{2\pi}} \exp\!\left(-\frac{z^2}{2}\right)
@@ -56,14 +57,14 @@ $$
 
 
 ## 2. 累積分布関数
-::: info 累積分布関数 (CDF)
+::: def 累積分布関数 (CDF)
 $$
 F(z) = \int_{-\infty}^z f(t)\,dt
 = \frac{1}{2}\left[1+\operatorname{erf}\!\left(\frac{z}{\sqrt{2}}\right)\right]
 $$
 :::
 
-::: tip 誤差関数
+::: def 誤差関数
 閉じた形での積分は存在しないため，誤差関数 $\operatorname{erf}$ を用いる：  
 $$
 \operatorname{erf}(u) = \frac{2}{\sqrt{\pi}} \int_0^u e^{-t^2}\,dt
@@ -78,7 +79,7 @@ $$
 
 
 ## 3. 期待値
-::: info 期待値
+::: def 期待値
 $$
 \mathbb{E}[Z] = 0
 $$
@@ -104,7 +105,7 @@ $$
 
 
 ## 4. 分散
-::: info 分散
+::: def 分散
 $$
 \mathrm{V}[Z] = 1
 $$
@@ -136,7 +137,7 @@ $$
 
 
 ## 5. 積率母関数
-::: info 積率母関数 (MGF)
+::: def 積率母関数 (MGF)
 $$
 M_Z(t) = \exp\!\left(\tfrac{1}{2}t^2\right)
 $$
@@ -172,7 +173,7 @@ $$
 
 
 ## 6. 特性関数
-::: info 特性関数 (CF)
+::: def 特性関数 (CF)
 $$
 \varphi_Z(t) = \exp\!\left(-\tfrac{1}{2}t^2\right)
 $$

@@ -14,7 +14,7 @@ icon: meteor-icons:feather
 # 共分散の性質まとめ
 
 ## 共分散の定義
-::: info  def
+::: def
 確率変数 $X, Y$ に対して
 $$
 \mathrm{Cov}[X, Y] = \mathbb{E}[(X-\mathbb{E}[X])(Y-\mathbb{E}[Y])]
@@ -28,7 +28,7 @@ $$
 
 ## 分散共分散行列の定義
 
-::: info def
+::: def
 確率ベクトル $\mathbf{X} = (X_1, X_2, \dots, X_p)^\top$ の平均ベクトルを  
 $$
 \mu = \mathbb{E}[\mathbf{X}] = 
@@ -37,7 +37,6 @@ $$
 \end{pmatrix}
 $$
 とすると, 分散共分散行列は次で定義される.  
-
 $$
 \begin{align}
 \Sigma 
@@ -57,11 +56,11 @@ $$
 
 ## 共分散の基本性質
 
-::: info 1. 対称性
+::: expl 1. 対称性
 $\mathrm{Cov}[X, Y] = \mathrm{Cov}[Y, X]$
 :::
 
-::: info 2. 線形性
+::: expl 2. 線形性
 $\mathrm{Cov}[aX+b, Y] = a\mathrm{Cov}[X, Y]$
 
 **線形性を利用した重要な公式**
@@ -73,6 +72,7 @@ $\mathrm{Cov}[aX+b, Y] = a\mathrm{Cov}[X, Y]$
 - 特に $\mathrm{Cov}[X+Y, Y] = \mathrm{Cov}[X,Y] + \mathrm{Var}[Y]$
 
 ::: details 証明
+::: proof
 まず線形性を確認する.   
 $$
 \begin{align}
@@ -102,7 +102,7 @@ $$
 $$
 :::
 
-::: info 3. 独立性
+::: expl 3. 独立性
 $X, Y$ が独立なら $\mathrm{Cov}[X,Y] = 0$
 
 ==ただし逆は必ずしも成立しません.==
@@ -110,6 +110,7 @@ $X, Y$ が独立なら $\mathrm{Cov}[X,Y] = 0$
 正規分布の場合は独立性と無相関性は同値です. 
 
 ::: details 証明
+::: proof
 公式より,
 $$
 \mathrm{Cov}[X, Y] = \mathbb{E}[XY] - \mathbb{E}[X]\mathbb{E}[Y]
@@ -132,6 +133,7 @@ $$
 $X, Y \sim U(0,1)$ 独立のとき、$\mathrm{Cov}[X,Y]$ を求めよ. 
 
 ::: details 解答
+::: ans
 独立なら $\mathrm{Cov}[X,Y]=0$ が成り立つ.   
 実際に計算すると：
 
@@ -151,6 +153,7 @@ $$
 $X \sim U(0,1)$ とし、$Y = 1 - X$ のとき、$\mathrm{Cov}[X,Y]$ を求めよ. 
 
 ::: details 解答
+::: ans
 $$
 \begin{align}
 \mathrm{Cov}[X,Y] &= \mathrm{Cov}[X,1-X] \\[6pt]
@@ -167,6 +170,7 @@ $$
 $X,Y \sim U(0,1)$ 独立のとき、ベクトル $\mathbf{Z} = (X,Y)^\top$ の共分散行列を求めよ. 
 
 ::: details 解答
+::: ans
 $$
 \begin{align}
 \Sigma &= 

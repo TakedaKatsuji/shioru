@@ -3,6 +3,8 @@ import { hopeTheme } from "vuepress-theme-hope";
 import { enNavbar } from "./navbar/index.js";
 import { enSidebar } from "./sidebar/index.js";
 
+import { containerPlugin } from "@vuepress/plugin-container"
+
 export default hopeTheme({
   hostname: "https://mister-hope.github.io",
 
@@ -100,6 +102,7 @@ export default hopeTheme({
   },
 
   plugins: {
+
     blog: true,
 
     components: {
@@ -110,4 +113,4 @@ export default hopeTheme({
       prefix: "fa6-solid:",
     },
   },
-});// 
+});

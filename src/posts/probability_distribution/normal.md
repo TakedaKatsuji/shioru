@@ -11,7 +11,7 @@ tag:
 ---
 
 # 正規分布の性質
-
+::: expl
 正規分布は **線形変換で閉じている分布** です.  
 $$
 Z \sim \mathcal{N}(0, 1)
@@ -24,39 +24,37 @@ $$
 
 したがって正規分布の多くの性質は ==標準正規分布の変数変換== によって導出可能です（計算が容易になる）.
 
----
 
-::: details 正規分布が線形変換で閉じている証明
-標準正規分布 $Z \sim \mathcal{N}(0,1)$ の確率密度関数は
-$$
-f_Z(z) = \frac{1}{\sqrt{2\pi}} e^{-z^2/2}
-$$
+  ::: details 正規分布が線形変換で閉じている証明
+  標準正規分布 $Z \sim \mathcal{N}(0,1)$ の確率密度関数は
+  $$
+  f_Z(z) = \frac{1}{\sqrt{2\pi}} e^{-z^2/2}
+  $$
 
-変数変換 $X = \mu + \sigma Z$ を考える.  
+  変数変換 $X = \mu + \sigma Z$ を考える.  
 
-逆変換は $z = \tfrac{x-\mu}{\sigma}$ で，ヤコビアンは $\tfrac{dz}{dx} = \tfrac{1}{\sigma}$.  
+  逆変換は $z = \tfrac{x-\mu}{\sigma}$ で，ヤコビアンは $\tfrac{dz}{dx} = \tfrac{1}{\sigma}$.  
 
-したがって $X$ の密度関数は
-$$
-\begin{align}
-f_X(x) &= f_Z\!\left(\frac{x-\mu}{\sigma}\right) \cdot \frac{1}{|\sigma|} \\[6pt]
-&= \frac{1}{\sqrt{2\pi}} 
-\exp\!\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)\cdot \frac{1}{\sigma} \\[6pt]
-&= \frac{1}{\sqrt{2\pi\sigma^2}} 
-\exp\!\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)
-\end{align}
-$$
+  したがって $X$ の密度関数は
+  $$
+  \begin{align}
+  f_X(x) &= f_Z\!\left(\frac{x-\mu}{\sigma}\right) \cdot \frac{1}{|\sigma|} \\[6pt]
+  &= \frac{1}{\sqrt{2\pi}} 
+  \exp\!\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)\cdot \frac{1}{\sigma} \\[6pt]
+  &= \frac{1}{\sqrt{2\pi\sigma^2}} 
+  \exp\!\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)
+  \end{align}
+  $$
 
-これは平均 $\mu$, 分散 $\sigma^2$ の正規分布 $\mathcal{N}(\mu,\sigma^2)$ の確率密度関数に一致する.  
-:::
+  これは平均 $\mu$, 分散 $\sigma^2$ の正規分布 $\mathcal{N}(\mu,\sigma^2)$ の確率密度関数に一致する.  
+  :::
 
----
 
 はじめに 👉 [標準正規分布の性質](/posts/probability_distribution/standard_normal.md) を確認することをおすすめします.
-
+:::
 
 ## 1. 確率密度関数
-::: info 確率密度関数 (PDF)
+::: def 確率密度関数 (PDF)
 平均 $\mu$, 分散 $\sigma^2$ の正規分布 $X \sim \mathcal{N}(\mu,\sigma^2)$ の確率密度関数は  
 $$
 f(x) = \frac{1}{\sqrt{2\pi\sigma^2}} \exp\!\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)
@@ -68,7 +66,7 @@ $$
 ---
 
 ## 2. 累積分布関数
-::: info 累積分布関数 (CDF)
+::: def 累積分布関数 (CDF)
 $$
 F(x) = \int_{-\infty}^x f(t)\,dt
 $$
@@ -78,7 +76,7 @@ F(x) = \frac{1}{2}\left[1+\operatorname{erf}\!\left(\frac{x-\mu}{\sqrt{2\sigma^2
 $$
 :::
 
-::: tip 誤差関数
+::: def 誤差関数
 積分を直接解くことはできないため，誤差関数 $\operatorname{erf}$ を導入する.  
 $$
 \operatorname{erf}(z) = \frac{2}{\sqrt{\pi}} \int_0^z e^{-t^2}\,dt
@@ -90,14 +88,14 @@ $$
 ---
 
 ## 3. 期待値
-::: info 期待値
+::: def 期待値
 $$
 \mathbb{E}[X] = \mu
 $$
 :::
 
 ::: details 導出の手順はこちら
-::: tip 導出
+::: def 導出
 平均 $\mu$, 分散 $\sigma^2$ の正規分布 $X \sim \mathcal{N}(\mu,\sigma^2)$ に対して，  
 
 $$
@@ -157,14 +155,14 @@ $$
 ---
 
 ## 4. 分散
-::: info 分散
+::: def 分散
 $$
 \mathrm{V}[X] = \sigma^2
 $$
 :::
 
 ::: details 導出の手順はこちら
-::: tip 導出
+::: def 導出
 正規分布 $X \sim \mathcal{N}(\mu,\sigma^2)$ に対して，分散は
 
 $$
@@ -227,14 +225,14 @@ $$
 ---
 
 ## 5. 積率母関数
-::: info 積率母関数 (MGF)
+::: def 積率母関数 (MGF)
 $$
 M_X(t) = \mathbb{E}[e^{tX}] = \exp\!\left(\mu t + \tfrac{1}{2}\sigma^2 t^2\right)
 $$
 :::
 
 ::: details 導出の手順はこちら
-::: tip 導出
+::: def 導出
 標準正規分布 $Z \sim \mathcal{N}(0,1)$ の[積率母関数](/posts/probability_distribution/standard_normal1.html#_5-積率母関数)は
 
 $$
@@ -278,14 +276,14 @@ $$
 ---
 
 ## 6. 特性関数
-::: info 特性関数 (CF)
+::: def 特性関数 (CF)
 $$
 \varphi_X(t) = \mathbb{E}[e^{itX}] = \exp\!\left(i\mu t - \tfrac{1}{2}\sigma^2 t^2\right)
 $$
 :::
 
 ::: details 導出の手順はこちら
-::: tip 導出
+::: def 導出
 MGFと同様の積分を行い，$t$ を $it$ に置換して導出できる.  
 $$
 \varphi_X(t) = M_X(it) = \exp\!\left(i\mu t - \tfrac{1}{2}\sigma^2 t^2\right)

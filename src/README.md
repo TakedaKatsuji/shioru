@@ -4,7 +4,7 @@ layout: Blog
 icon: house
 title: Home
 heroImage: /assets/icon/icon3.png
-bgImage: /assets/images/shioru-bg.jpg
+bgImage: /assets/images/shioru-bg2.jpg
 bgImageStyle:
   background-color: "rgba(0,0,0,0.3)"   # 半透明の黒を重ねる
   background-blend-mode: multiply       # 画像と合成

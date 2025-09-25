@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap");
+
 :root { --hero-title-bg: rgba(60, 102, 168, 0.1); }   /* light */
 html.dark { --hero-title-bg: rgba(60, 102, 168, 0.16); } /* dark */
 
 .vp-blog-hero-title {
+  font-family: "Shippori Mincho", "Hiragino Mincho ProN", "Yu Mincho", "游明朝", serif !important;
   color: #eef1f4 !important;
   font-size: 2.6rem;          /* 少し控えめ */
   font-weight: 400;
@@ -11,15 +14,16 @@ html.dark { --hero-title-bg: rgba(60, 102, 168, 0.16); } /* dark */
   margin: 1rem auto .2rem;
   padding: .4rem .9rem;
   display: inline-block;
-  background: var(--hero-title-bg);
-  border: 0px solid rgba(255,255,255,.15);  /* 細フチ */
-  border-radius: 5px;        /* 小さめ角丸 */
-  box-shadow: 0 4px 14px rgba(0,0,0,.18);   /* 低コントラスト */
+  // background: var(--hero-title-bg);
+  // border: 0px solid rgba(255,255,255,.15);  /* 細フチ */
+  // border-radius: 5px;        /* 小さめ角丸 */
+  // box-shadow: 0 4px 14px rgba(0,0,0,.18);   /* 低コントラスト */
 }
 
 
 /* tagline */
 .vp-blog-hero-description {
+  font-family: "Shippori Mincho", "Hiragino Mincho ProN", "Yu Mincho", "游明朝", serif !important;
   color: #ffffff !important;
   margin-top: 0rem;   // 上の余白をほぼゼロに
   font-size: 1.2rem;
@@ -128,20 +132,26 @@ h4 span {
   color: #f9fbfe;       /* 元の背景を文字色に */
 }
 
-// ==== mark ===== //
-:root { --mark-src: #fff59d; }
-html.dark {
-  /* 背景色があるならそれと混色して馴染ませる */
-  --mark-bg: color-mix(in oklab, var(--mark-src) 20%, var(--vp-c-bg, #111)); /* 20%前後 */
+/* 明: しっかり可視 / 暗: 薄めだが消えない */
+:root {
+  --mark-bg: rgba(255,245,157,.38); /* light */
+  --mark-cut: 62%;                  /* どこから塗るか */
 }
-:where(p, li, dd, blockquote) mark{
-  color: currentColor;
-  background: linear-gradient(transparent 68%, var(--mark-bg, #fff9a8) 68%);
-  border-radius: 4px; padding: 0 2px;
+html.dark {
+  --mark-bg: rgba(255,245,157,.14); /* dark */
+  --mark-cut: 72%;
 }
 
-/* 必要ならコード内は無効化 */
-code mark, pre mark { background: none; color: currentColor; padding: 0; }
+:where(p, li, dd, blockquote) mark{
+  color: currentColor;
+  background: linear-gradient(transparent var(--mark-cut),
+                              var(--mark-bg) var(--mark-cut));
+  border-radius: 4px;
+  padding: 0 2px;
+}
+
+/* コード内は除外 */
+code mark, pre mark { background: none; padding: 0; }
 
 
 // ==== box ===== //

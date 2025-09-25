@@ -1,21 +1,27 @@
-/* heroText の色変更 */
+:root { --hero-title-bg: rgba(60, 102, 168, 0.1); }   /* light */
+html.dark { --hero-title-bg: rgba(60, 102, 168, 0.16); } /* dark */
 
 .vp-blog-hero-title {
-  color: #f5f5f5 !important;
-  font-size: 2.8rem;
-  font-weight: 600;
+  color: #eef1f4 !important;
+  font-size: 2.6rem;          /* 少し控えめ */
+  font-weight: 400;
+  letter-spacing: 0.2px;
   text-align: center;
-  letter-spacing: 0.5px;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-  margin: 1rem 0 0.5rem; // 上下余白を小さく
-  padding: 0.25rem;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  text-shadow: none;          /* ギラつきを除去 */
+  margin: 1rem auto .2rem;
+  padding: .4rem .9rem;
+  display: inline-block;
+  background: var(--hero-title-bg);
+  border: 0px solid rgba(255,255,255,.15);  /* 細フチ */
+  border-radius: 5px;        /* 小さめ角丸 */
+  box-shadow: 0 4px 14px rgba(0,0,0,.18);   /* 低コントラスト */
 }
+
 
 /* tagline */
 .vp-blog-hero-description {
   color: #ffffff !important;
-  margin-top: 0.2rem;   // 上の余白をほぼゼロに
+  margin-top: 0rem;   // 上の余白をほぼゼロに
   font-size: 1.2rem;
   font-weight: 400;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);

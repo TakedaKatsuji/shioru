@@ -51,7 +51,6 @@ $$
 
 
 はじめに 👉 [標準正規分布の性質](/posts/probability_distribution/standard_normal.md) を確認することをおすすめします.
-:::
 
 ## 1. 確率密度関数
 ::: def 確率密度関数 (PDF)
@@ -63,7 +62,10 @@ $$
 
 **確率密度関数のグラフ**
 
----
+<div style="display: flex; gap: 10px; justify-content: center;">
+  <img src="/assets/images/probability_distribution/normal/pdf.png" style="max-width: 48%; height: auto;">
+  <img src="/assets/images/probability_distribution/normal/pdf.gif" style="max-width: 48%; height: auto;">
+</div>
 
 ## 2. 累積分布関数
 ::: def 累積分布関数 (CDF)
@@ -85,7 +87,9 @@ $$
 
 **累積分布関数のグラフ**
 
----
+<div style="display: flex; gap: 10px; justify-content: center;">
+  <img src="/assets/images/probability_distribution/normal/cdf.png" style="max-width: 70%; height: auto;">
+</div>
 
 ## 3. 期待値
 ::: def 期待値

@@ -82,62 +82,64 @@ $$
 $X \sim \mathrm{Uniform}(0,1)$ とし，$Y = 1 - X$ のとき，確率変数 $X, Y$ の相関係数を求めよ.
 
 ::: details 解答
-::: ans
-まず，$X$ の基本的な統計量は
 
-$$
-\mathbb{E}[X] = \tfrac{1}{2}, \quad \mathrm{V}[X] = \tfrac{1}{12}
-$$
+  ::: ans
+  まず，$X$ の基本的な統計量は
 
-です.  
+  $$
+  \mathbb{E}[X] = \tfrac{1}{2}, \quad \mathrm{V}[X] = \tfrac{1}{12}
+  $$
 
-次に $Y = 1 - X$ なので，
+  です.  
 
-$$
-\mathbb{E}[Y] = 1 - \mathbb{E}[X] = \tfrac{1}{2}, \quad 
-\mathrm{V}[Y] = \mathrm{V}[1 - X] = \mathrm{V}[X] = \tfrac{1}{12}
-$$
+  次に $Y = 1 - X$ なので，
 
-となります.  
+  $$
+  \mathbb{E}[Y] = 1 - \mathbb{E}[X] = \tfrac{1}{2}, \quad 
+  \mathrm{V}[Y] = \mathrm{V}[1 - X] = \mathrm{V}[X] = \tfrac{1}{12}
+  $$
 
-共分散は
-$$
-\begin{align}
-\mathrm{Cov}[X,Y]
-&= \mathbb{E}[XY] - \mathbb{E}[X]\mathbb{E}[Y] \\[6pt]
-&= \mathbb{E}[X(1-X)] - \tfrac{1}{2}\cdot\tfrac{1}{2} \\[6pt]
-&= \mathbb{E}[X - X^2] - \tfrac{1}{4}
-\end{align}
-$$
+  となります.  
 
-ここで
+  共分散は
+  $$
+  \begin{align}
+  \mathrm{Cov}[X,Y]
+  &= \mathbb{E}[XY] - \mathbb{E}[X]\mathbb{E}[Y] \\[6pt]
+  &= \mathbb{E}[X(1-X)] - \tfrac{1}{2}\cdot\tfrac{1}{2} \\[6pt]
+  &= \mathbb{E}[X - X^2] - \tfrac{1}{4}
+  \end{align}
+  $$
 
-$$
-\mathbb{E}[X] = \tfrac{1}{2}, \quad \mathbb{E}[X^2] = \frac{1}{3}
-$$
+  ここで
 
-だから
-$$
-\begin{align}
-\mathbb{E}[X - X^2] &= \tfrac{1}{2} - \tfrac{1}{3} = \tfrac{1}{6}, \\[6pt]
-\mathrm{Cov}[X,Y] &= \tfrac{1}{6} - \tfrac{1}{4} = -\tfrac{1}{12}
-\end{align}
-$$
+  $$
+  \mathbb{E}[X] = \tfrac{1}{2}, \quad \mathbb{E}[X^2] = \frac{1}{3}
+  $$
 
-したがって，相関係数は
-$$
-\begin{align}
-\rho_{X,Y}
-&= \frac{\mathrm{Cov}[X,Y]}{\sqrt{\mathrm{V}[X]}\sqrt{\mathrm{V}[Y]}} \\[6pt]
-&= \frac{-\tfrac{1}{12}}{\sqrt{\tfrac{1}{12}} \cdot \sqrt{\tfrac{1}{12}}} \\[6pt]
-&= \frac{-\tfrac{1}{12}}{\tfrac{1}{12}} \\[6pt]
-&= -1
-\end{align}
-$$
+  だから
+  $$
+  \begin{align}
+  \mathbb{E}[X - X^2] &= \tfrac{1}{2} - \tfrac{1}{3} = \tfrac{1}{6}, \\[6pt]
+  \mathrm{Cov}[X,Y] &= \tfrac{1}{6} - \tfrac{1}{4} = -\tfrac{1}{12}
+  \end{align}
+  $$
 
-よって，$X, Y$ は**完全な負の相関**を持つ.
+  したがって，相関係数は
+  $$
+  \begin{align}
+  \rho_{X,Y}
+  &= \frac{\mathrm{Cov}[X,Y]}{\sqrt{\mathrm{V}[X]}\sqrt{\mathrm{V}[Y]}} \\[6pt]
+  &= \frac{-\tfrac{1}{12}}{\sqrt{\tfrac{1}{12}} \cdot \sqrt{\tfrac{1}{12}}} \\[6pt]
+  &= \frac{-\tfrac{1}{12}}{\tfrac{1}{12}} \\[6pt]
+  &= -1
+  \end{align}
+  $$
 
-::: tip 別解
+  よって，$X, Y$ は**完全な負の相関**を持つ.
+  :::
+
+::: ans 別解
 [共分散の**線形性**](/posts/multivariate_distribution/covariance.md)を使うとより簡単に計算できます.
 $$
 \begin{align}

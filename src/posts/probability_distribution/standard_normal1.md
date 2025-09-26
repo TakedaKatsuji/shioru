@@ -14,6 +14,11 @@ tag:
 
 
 # 標準正規分布の性質
+
+<div style="display: flex; gap: 10px; justify-content: center;">
+  <img src="/assets/images/probability_distribution/standard_normal/thumbnail.png" style="max-width: 100%; height: auto;">
+</div>
+
 ::: expl
 この記事では標準正規分布の $t$ 次モーメントを既知とします。
 

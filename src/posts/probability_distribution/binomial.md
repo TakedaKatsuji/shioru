@@ -14,8 +14,9 @@ tag:
 # 二項分布の性質
 
 <div style="display: flex; gap: 10px; justify-content: center;">
-  <img src="/assets/images/probability_distribution/binomial/binom_to_normal_line.gif" style="max-width: 100%; height: auto;">
+  <img src="/assets/images/probability_distribution/binomial/thumbnail.png" style="max-width: 100%; height: auto;">
 </div>
+
 
 ::: expl
 二項分布は 試行回数 $n$、成功確率を $p$ とする独立ベルヌーイ試行の和で表されます.
@@ -33,7 +34,12 @@ $$
 で表される.
 :::
 
+<div style="display: flex; gap: 10px; justify-content: center;">
+  <img src="/assets/images/probability_distribution/binomial/binom_to_normal_line.gif" style="max-width: 100%; height: auto;">
+</div>
+
 ## 1. 確率質量関数
+
 ::: def 確率質量関数 (PMF)
 $$
 \mathbb{P}(X=k)=\,{}_nC_k\,p^k(1-p)^{\,n-k},\quad k=0,1,\dots,n.

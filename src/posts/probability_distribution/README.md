@@ -7,6 +7,10 @@ timeline: false
 
 ## 確率分布の基本
 
+<div style="display: flex; gap: 10px; justify-content: center;">
+  <img src="/assets/images/probability_distribution/thumbnail.png" style="max-width: 100%; height: auto;">
+</div>
+
 <div class="vp-card-container">
 
 <VPCard

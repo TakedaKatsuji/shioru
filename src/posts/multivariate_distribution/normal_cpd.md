@@ -15,6 +15,10 @@ tag:
 
 # 2次元正規分布の条件付き分布
 
+<div style="display: flex; gap: 10px; justify-content: center;">
+  <img src="/assets/images/multivariate_distribution/covariance/thumbnail.png" style="max-width: 100%; height: auto;">
+</div>
+
 統計検定1級では**2次元正規分布の条件付き分布**がよく出てきます.  
 
 しかし公式を丸暗記しようとすると、平均や分散の形を間違えやすく、苦労する人も多いと思います.  

@@ -11,6 +11,11 @@ tag:
 ---
 
 # 相関係数の性質まとめ
+
+<div style="display: flex; gap: 10px; justify-content: center;">
+  <img src="/assets/images/multivariate_distribution/correlation_coefficient/thumbnail.png" style="max-width: 100%; height: auto;">
+</div>
+
 ::: expl
 相関係数とは二つ以上の確率変数の間にある関係の強弱を表す指標で、$-1 \leq \rho \leq 1$ を満たします.
 

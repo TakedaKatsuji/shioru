@@ -11,8 +11,9 @@ tag:
 ---
 
 # 一様分布の性質
-
-連続一様分布の重要な性質を解説します.
+<div style="display: flex; gap: 10px; justify-content: center;">
+  <img src="/assets/images/probability_distribution/uniform/thumbnail.png" style="max-width: 100%; height: auto;">
+</div>
 
 ## 1. 確率密度関数
 

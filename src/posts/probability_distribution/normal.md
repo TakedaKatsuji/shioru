@@ -11,6 +11,11 @@ tag:
 ---
 
 # 正規分布の性質
+
+<div style="display: flex; gap: 10px; justify-content: center;">
+  <img src="/assets/images/probability_distribution/normal/thumbnail.png" style="max-width: 100%; height: auto;">
+</div>
+
 ::: expl
 正規分布は **線形変換で閉じている分布** です.  
 $$

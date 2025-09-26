@@ -16,6 +16,10 @@ tag:
 
 # 標準正規分布の t 次モーメント
 
+<div style="display: flex; gap: 10px; justify-content: center;">
+  <img src="/assets/images/probability_distribution/standard_normal/thumbnail2.png" style="max-width: 100%; height: auto;">
+</div>
+
 ここでは，標準正規分布における $t$ 次モーメントを導出します．
 ::: def t 次モーメント
 標準正規分布 $X \sim \mathcal{N}(0,1)$ に対して，

@@ -6,6 +6,10 @@ timeline: false
 ---
 ## 2013年
 
+<div style="display: flex; gap: 10px; justify-content: center;">
+  <img src="/assets/images/grade1_1/2013/thumbnail.png" style="max-width: 100%; height: auto;">
+</div>
+
 <div class="vp-card-container">
 
 <VPCard

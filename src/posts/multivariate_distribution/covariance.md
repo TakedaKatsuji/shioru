@@ -13,6 +13,10 @@ icon: meteor-icons:feather
 
 # 共分散の性質まとめ
 
+<div style="display: flex; gap: 10px; justify-content: center;">
+  <img src="/assets/images/multivariate_distribution/covariance/thumbnail.png" style="max-width: 100%; height: auto;">
+</div>
+
 ## 共分散の定義
 ::: def
 確率変数 $X, Y$ に対して

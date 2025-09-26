@@ -34,8 +34,6 @@ $$
   <img src="/assets/images/probability_distribution/uniform/pdf.gif" style="max-width: 48%; height: auto;">
 </div>
 
-<AdsInArticle />
-
 ## 2. 累積分布関数
 ::: def 累積分布関数 (CDF)
 $$

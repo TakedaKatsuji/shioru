@@ -30,10 +30,21 @@ export default defineUserConfig({
     },
   },
 
-  head: [["link", { rel: "icon", href: "/favicon.png?v=1" }]],
-
   plugins: boxes.map(([type, label]) =>
     markdownContainerPlugin({ type, locales: { "/": { defaultInfo: label } } })
   ),
+  
+  head: [
+    ["link", { rel: "icon", href: "/favicon.png?v=1" }],
+    [
+      "script",
+      {
+        async: "",
+        src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7160116077446563",
+        crossorigin: "anonymous",
+      },
+    ],
+  ],
+  
   theme,
 });

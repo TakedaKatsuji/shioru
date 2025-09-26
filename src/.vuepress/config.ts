@@ -1,5 +1,6 @@
 import { defineUserConfig } from "vuepress";
 import { markdownContainerPlugin } from '@vuepress/plugin-markdown-container'
+import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
 
 
 import theme from "./theme.js";
@@ -30,9 +31,12 @@ export default defineUserConfig({
     },
   },
 
-  plugins: boxes.map(([type, label]) =>
-    markdownContainerPlugin({ type, locales: { "/": { defaultInfo: label } } })
-  ),
+  plugins: [
+    ...boxes.map(([type, label]) =>
+      markdownContainerPlugin({ type, locales: { "/": { defaultInfo: label } } })
+    ),
+    googleAnalyticsPlugin({id: 'G-8NJW3R4RJD'}),
+  ],
   
   head: [
     ["link", { rel: "icon", href: "/favicon.png?v=1" }],

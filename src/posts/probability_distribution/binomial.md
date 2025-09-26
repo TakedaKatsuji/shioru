@@ -17,14 +17,25 @@ tag:
 </div>
 
 ::: expl
-試行回数を $n$、成功確率を $p$ とする独立ベルヌーイ試行の和 $X\sim\mathrm{Bin}(n,p)$ を扱う. 
-二項分布は離散型なので ==確率質量関数 (PMF)== を用いる.
+二項分布は 試行回数 $n$、成功確率を $p$ とする独立ベルヌーイ試行の和で表されます.
+これは成功回数の分布であり、==回数(カウント)の分布をモデル化== するときに頻繁に利用されます.
+
+独立同分布のベルヌーイ分布に従う確率変数 $I_i$ とする.
+二項分布は
+$$
+\begin{align}
+I_i &\overset{i.i.d.}{\sim} \mathrm{Bern}(p)\\[6pt]
+
+X &= \sum_i^n I_i \sim Bin(n, p)
+\end{align}
+$$
+で表される.
 :::
 
 ## 1. 確率質量関数
 ::: def 確率質量関数 (PMF)
 $$
-\mathbb{P}(X=k)=\binom{n}{k}p^{\,k}(1-p)^{\,n-k},\qquad k=0,1,\dots,n.
+\mathbb{P}(X=k)=\,{}_nC_k\,p^k(1-p)^{\,n-k},\quad k=0,1,\dots,n.
 $$
 :::
 
@@ -55,7 +66,7 @@ $$
 $$
 :::
 
-::: details 導出の手順はこちら
+::: details 導出の手順はこちら　ベルヌーイ分布から
 ::: calc 導出
 $$
 X=\sum_{i=1}^n I_i,\ \ I_i\;\overset{\mathrm{i.i.d.}}{\sim} \mathrm{Bernoulli}(p).
@@ -69,6 +80,45 @@ $$
 $$
 :::
 
+::: details 導出の手順はこちら 確率質量関数から
+::: calc 導出
+
+二項分布 $X \sim \mathrm{Bin}(n,p)$ に対して
+$$
+\mathbb{E}[X]=\sum_{k=0}^n k\,{}_nC_k\,p^k(1-p)^{n-k}.
+$$
+
+$_nC_k$ を階乗で展開し，$k$ と約分する:
+$$
+\begin{align}
+k\,{}_nC_k
+&=k \cdot \frac{n!}{k!(n-k)!} \\[4pt]
+&=\frac{k}{k!}\cdot\frac{n!}{(n-k)!}
+=\frac{1}{(k-1)!}\cdot\frac{n!}{(n-k)!} \\[4pt]
+&=\frac{n\,(n-1)!}{(k-1)!\,(n-k)!}
+= n \cdot \frac{(n-1)!}{(k-1)!\,\{(n-1)-(k-1)\}!} \\[4pt]
+&= n \cdot {}_{\,n-1}C_{\,k-1}.
+\end{align}
+$$
+
+これを元の和に代入し，$m=k-1$ と置換する:
+$$
+\begin{align}
+\mathbb{E}[X]
+&=\sum_{k=1}^n n\,{}_{\,n-1}C_{\,k-1}\,p^k(1-p)^{n-k} \\[4pt]
+&= n p \sum_{k=1}^n {}_{\,n-1}C_{\,k-1}\,p^{k-1}(1-p)^{(n-1)-(k-1)} \\[4pt]
+&= n p \sum_{m=0}^{n-1} {}_{\,n-1}C_{\,m}\,p^{m}(1-p)^{(n-1)-m}. 
+\end{align}
+$$
+
+ここで $\sum_{m=0}^{n-1} {}_{\,n-1}C_{\,m}\,p^{m}(1-p)^{(n-1)-m}=1$（全確率）なので
+$$
+\mathbb{E}[X]=n p \cdot 1 = np.
+$$
+
+:::
+
+
 ## 4. 分散
 ::: def 分散
 $$
@@ -76,13 +126,73 @@ $$
 $$
 :::
 
-::: details 導出の手順はこちら
+::: details 導出の手順はこちら ベルヌーイ分布から
 ::: calc 導出
 独立より $\mathrm{Cov}[I_i,I_j]=0\ (i\ne j)$、かつ $\mathrm{V}[I_i]=p(1-p)$.
 $$
 \mathrm{V}[X]=\sum_{i=1}^n\mathrm{V}[I_i]=np(1-p).
 $$
 :::
+
+::: details 導出の手順はこちら 確率質量関数から
+::: calc 導出
+
+$X \sim \mathrm{Bin}(n,p)$ の分散は
+$$
+\mathrm{V}[X] = \mathbb{E}[X^2]-\mathbb{E}[X]^2.
+$$
+ここでは $\mathbb{E}[X(X-1)]$ を先に求めてから
+$\mathbb{E}[X^2]=\mathbb{E}[X(X-1)]+\mathbb{E}[X]$ を用いる.
+
+まず二階階乗モーメント:
+$$
+\begin{align}
+\mathbb{E}[X(X-1)]
+&=\sum_{k=0}^n k(k-1)\,{}_nC_k\,p^k(1-p)^{n-k}.
+\end{align}
+$$
+
+$_nC_k$ を階乗で展開し約分する:
+$$
+\begin{align}
+k(k-1)\,{}_nC_k
+&=k(k-1)\cdot \frac{n!}{k!(n-k)!} \\[4pt]
+&=\frac{k(k-1)}{k!}\cdot \frac{n!}{(n-k)!}
+=\frac{1}{(k-2)!}\cdot \frac{n!}{(n-k)!} \\[4pt]
+&=\frac{n(n-1)\,(n-2)!}{(k-2)!\,(n-k)!} \\[4pt]
+&= n(n-1)\cdot {}_{\,n-2}C_{\,k-2}.
+\end{align}
+$$
+
+代入し，$m=k-2$ と置換する:
+$$
+\begin{align}
+\mathbb{E}[X(X-1)]
+&=\sum_{k=2}^n n(n-1)\,{}_{\,n-2}C_{\,k-2}\,p^k(1-p)^{n-k} \\[4pt]
+&= n(n-1)\,p^2 \sum_{m=0}^{n-2} {}_{\,n-2}C_{\,m}\,p^{m}(1-p)^{(n-2)-m}.
+\end{align}
+$$
+
+ここで $\sum_{m=0}^{n-2} {}_{\,n-2}C_{\,m}\,p^{m}(1-p)^{(n-2)-m}=1$（全確率）より
+$$
+\mathbb{E}[X(X-1)] = n(n-1)p^2.
+$$
+
+ゆえに
+$$
+\mathbb{E}[X^2]=\mathbb{E}[X(X-1)]+\mathbb{E}[X]
+= n(n-1)p^2 + np,
+$$
+したがって
+$$
+\mathrm{V}[X]
+= \bigl(n(n-1)p^2 + np\bigr) - (np)^2
+= np(1-p).
+$$
+
+:::
+
+
 
 ## 5. 積率母関数
 ::: def 積率母関数 (MGF)

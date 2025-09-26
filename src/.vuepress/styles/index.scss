@@ -1,3 +1,4 @@
+@use "sass:color";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap");
 
 :root { --hero-title-bg: rgba(60, 102, 168, 0.1); }   /* light */
@@ -211,6 +212,6 @@ $blue-gray: #64748b; /* 文字/参考系 */
 
 /* 暗色で眩しい場合だけ少し減彩 */
 html.dark {
-  .custom-container.expl  { @include box27(lighten($blue-300, 6%)); }
-  .custom-container.def   { @include box27(lighten($blue-400, 6%)); }
+  .custom-container.expl { @include box27(color.adjust($blue-300, $lightness: 6%)); }
+  .custom-container.def  { @include box27(color.adjust($blue-400, $lightness: 6%)); }
 }

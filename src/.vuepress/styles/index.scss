@@ -1,6 +1,6 @@
 @use "sass:color";
 @use "./cards";
-
+@use "./box";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap");
 
 :root { --hero-title-bg: rgba(60, 102, 168, 0.1); }   /* light */
@@ -49,17 +49,6 @@ p {
   }
 }
 
-/* h2 */
-// h2 span {
-//   display: inline-block;
-//   padding: 0.4em 1em;                 /* h3よりやや広め */
-//   background: #f9fbfe;                /* 単色で落ち着かせる */
-//   border-left: 4px solid #3c66a8;     /* h3と同じ太さ */
-//   border-radius: 6px;
-//   color: #2d4f7c;
-//   font-weight: 700;                   /* h3より少し強調 */
-//   font-size: 1.4rem;                  /* h3より大きいが控えめ */
-// }
 :root{
   --h2-underline: #3b82f6;
   --h3-underline: #60a5fa;
@@ -151,69 +140,3 @@ html.dark {
 
 /* コード内は除外 */
 code mark, pre mark { background: none; padding: 0; }
-
-
-// ==== box ===== //
-
-/* ベース */
-@mixin box27($c) {
-  position: relative;
-  margin: 2em 0;
-  padding: .5em 1em;
-  border: 3px solid $c;
-
-  > .custom-container-title{
-    position: absolute; display: inline-block;
-    top: -27px; left: -3px;
-    padding: 0 9px; height: 25px; line-height: 25px; font-size: 17px;
-    background: $c; color: #fff; font-weight: bold; border-radius: 5px 5px 0 0;
-    margin: 0; white-space: nowrap;
-  }
-
-  /* 本文タイポグラフィ */
-  > :not(.custom-container-title) {
-    line-height: 1.75;         /* 行間 */
-  }
-  /* 連続要素の上下間隔 */
-  > *:not(.custom-container-title) + * {
-    margin-top: .6em;
-  }
-
-  /* 段落とリストの微調整 */
-  p { margin: .4em 0; }
-  ul, ol { padding-left: 1.2em; margin: .4em 0; }
-  li { margin: .25em 0; }
-
-  /* コードや数式ブロックが詰まる場合 */
-  pre, .katex-display, mjx-container[display="true"] {
-    margin: .7em 0;
-    line-height: 1.6;
-  }
-}
-
-/* 青パレット */
-$blue-300: #93c5fd; /* 明るい */
-$blue-400: #60a5fa;
-$blue-500: #3b82f6; /* 基準 */
-$blue-600: #2563eb;
-$blue-700: #1d4ed8; /* 濃い */
-$blue-gray: #64748b; /* 文字/参考系 */
-
-.custom-container.def   { @include box27($blue-400); }
-.custom-container.expl  { @include box27($blue-300); }
-.custom-container.hint  { @include box27($blue-500); }
-.custom-container.plan  { @include box27($blue-500); }
-.custom-container.note  { @include box27($blue-600); }
-.custom-container.ex    { @include box27($blue-300); }
-.custom-container.sum   { @include box27($blue-400); }
-.custom-container.calc  { @include box27($blue-700); }
-.custom-container.ans   { @include box27($blue-700); }
-.custom-container.proof { @include box27($blue-gray); }
-.custom-container.term  { @include box27($blue-500); }
-.custom-container.ref   { @include box27($blue-gray); }
-
-/* 暗色で眩しい場合だけ少し減彩 */
-html.dark {
-  .custom-container.expl { @include box27(color.adjust($blue-300, $lightness: 6%)); }
-  .custom-container.def  { @include box27(color.adjust($blue-400, $lightness: 6%)); }
-}

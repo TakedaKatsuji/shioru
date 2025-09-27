@@ -30,5 +30,11 @@ timeline: false
   link="/posts/grade1_1/2013/3.md"
 />
 
+<VPCard
+  title="統計数理 [4]"
+  desc="ウィルコクソンの符号順位検定・正規近似"
+  link="/posts/grade1_1/2013/4.md"
+/>
+
 </div>
 

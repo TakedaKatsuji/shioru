@@ -120,10 +120,11 @@ h4 span {
   color: #f9fbfe;       /* 元の背景を文字色に */
 }
 
+// ===== mark ===== //
 /* 明: しっかり可視 / 暗: 薄めだが消えない */
 :root {
-  --mark-bg: rgba(255,245,157,.38); /* light */
-  --mark-cut: 62%;                  /* どこから塗るか */
+  --mark-bg: rgba(255,245,157,.82); /* light */
+  --mark-cut: 52%;                  /* どこから塗るか */
 }
 html.dark {
   --mark-bg: rgba(255,245,157,.14); /* dark */

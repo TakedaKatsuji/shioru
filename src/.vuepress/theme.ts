@@ -34,6 +34,7 @@ export default hopeTheme({
     }
   },
   editLink: false,
+  darkmode: "disable",
 
   locales: {
     "/": {

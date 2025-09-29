@@ -23,6 +23,11 @@ projects:
     desc: 多次元正規分布や共分散行列の解説
     link: /posts/multivariate_distribution/
 
+  - icon: meteor-icons:folder 
+    name: 仮説検定手法
+    desc: 仮説検定について解説
+    link: /posts/test/
+
   - icon: pen-to-square
     name: 統計検定1級 過去問解説
     desc: 分野別の解法・公式の解説

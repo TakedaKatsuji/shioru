@@ -37,6 +37,14 @@ export const enNavbar: NavbarOptions = navbar([
           { text: "2次元正規分布の条件付き分布", icon: "meteor-icons:feather",link: "normal_cpd.md"},
         ],
       },
+      {
+        text: "仮説検定手法",
+        icon: "meteor-icons:folder",
+        prefix: "test/",
+        children: [
+          { text: "半整数補正", icon: "meteor-icons:feather",link: "continuity_correction.md"},
+        ],
+      },
     ],
   },
 ]);

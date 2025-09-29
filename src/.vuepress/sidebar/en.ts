@@ -29,6 +29,13 @@ export const enSidebar = sidebar({
           collapsible: true,
           children: "structure"
         },
+        {
+          text: "仮説検定手法",
+          icon: "meteor-icons:folder",
+          prefix: "test/",
+          collapsible: true,
+          children: "structure"
+        },
       ],
     },
     "intro"

@@ -37,6 +37,11 @@ timeline: false
   link="/posts/probability_distribution/binomial.html"
 />
 
+<VPCard
+  title="t分布"
+  desc="PDF・CDF・期待値・分散"
+  link="/posts/probability_distribution/t.html"
+/>
 </div>
 
 ## 確率分布の性質

@@ -77,10 +77,26 @@ $$
 $$
 F(x) = \int_{-\infty}^x f(t)\,dt
 $$
-閉じた形は存在せず，誤差関数 $\operatorname{erf}$ で表される.  
+閉じた形は存在しませんが, 正則不完全ベータ関数を用いて,
+
+$t\ne 0$ のとき，$x=\dfrac{n}{n+t^2}$，$a=\dfrac{n}{2}$，$b=\dfrac{1}{2}$ とおくと
 $$
-F(x) = \frac{1}{2}\left[1+\operatorname{erf}\!\left(\frac{x-\mu}{\sqrt{2\sigma^2}}\right)\right]
+F_T(t)=
+\frac{1}{2}+\frac{1}{2}\,\operatorname{sgn}(t)\,\bigl[\,1-I_{x}(a,b)\,\bigr],
 $$
+$t=0$ のとき $F_T(0)=\tfrac12$.
+
+等価に，符号で分けて
+$$
+F_T(t)=
+\begin{cases}
+\dfrac{1}{2}\,I_{\,\frac{n}{n+t^2}}\!\left(\dfrac{n}{2},\dfrac{1}{2}\right), & t<0,\\[10pt]
+1-\dfrac{1}{2}\,I_{\,\frac{n}{n+t^2}}\!\left(\dfrac{n}{2},\dfrac{1}{2}\right), & t>0.
+\end{cases}
+$$
+
+性質: 対称性より $F_T(-t)=1-F_T(t)$.
+:::
 :::
 
 ::: def 誤差関数

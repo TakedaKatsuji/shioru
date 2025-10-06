@@ -7,12 +7,15 @@ category:
   - 仮説検定
 tag:
   - t検定
+  - 対応のないt検定
+  - 対応のないt検定
+  - ウェルチのt検定
   - パラメトリック
   - 正規分布
 ---
 
 
-# t検定について解説
+# t検定について概要解説
 
 統計検定の過去問題でt検定は頻出します.t検定には複数種類がありますが本質は ==**母平均に関する検定**== であるということです.
 
@@ -22,7 +25,7 @@ tag:
 <VPCard
   title="Ｔ分布の性質"
   desc="期待値・分散・導出"
-  link="/posts/test/continuity_correction.html"
+  link="/posts/probability_distribution/t.html"
 />
 </div>
 :::

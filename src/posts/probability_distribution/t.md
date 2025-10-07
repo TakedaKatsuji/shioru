@@ -24,13 +24,13 @@ t分布もしくは ==スチューデントのt分布== と言われます。
 
 
 ::: def
-$Z\sim\mathcal{N}(0,1)$, $W\sim\chi^2(n)$, かつ $Z\perp W$ (独立)のとき,
+$Y\sim\mathcal{N}(0,1)$, $X\sim\chi^2(n)$, かつ $Y\perp X$ (独立)のとき,
 
 $$
-T=\frac{Z}{\sqrt{W/n}} \sim t(n)
+T=\frac{Y}{\sqrt{X/n}} \sim t(n)
 $$
 は自由度 $n$ の $t$ 分布に従う.
-ただし, $Z$ は標準正規分布, $W$ はカイ二乗分布を表す。
+ただし, $Y$ は標準正規分布, $X$ は自由度 $n$ のカイ二乗分布を表す。
 :::
 
 ## 1. 確率密度関数
@@ -70,6 +70,14 @@ $$
 ==標準正規分布と一致== するようすが確認できます.
 
 特徴として、自由度が小さい場合, 標準正規分布より ==山が低く、裾が厚い== です.
+
+t分布の確率密度関数の導出は
+
+- 変数変換
+- ヤコビアンの計算
+- ガンマ関数の定義
+
+などなど為になる計算が豊富です。ぜひ理解してできるようにしてください。
 :::
 
 
@@ -88,6 +96,131 @@ $$
 />
 </div>
 :::
+
+
+::: details 導出の手順はこちら
+::: def 導出
+
+$Y\sim\mathcal{N}(0,1)$, $X\sim\chi^2(n)$, かつ $Y\perp X$ (独立)のとき,
+それぞれの周辺確率密度関数を $f_X(x), f_Y(y)$とする.
+$$
+\begin{align}
+f_X(x) &= \frac{1}{2^{n/2}\Gamma\!\left(\frac{n}{2}\right)}x^{\frac{n}{2}-1}e^{-\frac{x}{2}} \\[6pt]
+f_Y(y) &= \frac{1}{\sqrt{2\pi}}e^{-\frac{1}{2}y^2}
+\end{align}
+$$
+
+$T=\dfrac{Y}{\sqrt{X/n}},\ U=X$ で変数変換.
+
+- ==**逆変換**==
+  $x=u,\ y=\sqrt{\dfrac{u}{n}}\,t$
+
+- ==**ヤコビアン** $|J|$==
+
+$$
+\begin{aligned}
+J
+&=
+\left(
+\begin{array}{cc}
+\frac{\partial x}{\partial t} & \frac{\partial x}{\partial u}\\[6pt]
+\frac{\partial y}{\partial t} & \frac{\partial y}{\partial u}
+\end{array}
+\vphantom{\begin{array}{cc}0 & 1\\[6pt]\sqrt{\dfrac{u}{n}} & \dfrac{t}{2\sqrt{un}}\end{array}}
+\right) \\[6pt]
+&=
+\left(
+\begin{array}{cc}
+0 & 1\\[6pt]
+\sqrt{\dfrac{u}{n}} & \dfrac{t}{2\sqrt{un}}
+\end{array}
+\right)
+\end{aligned}
+$$
+
+$$
+\begin{align}
+|J| & = \left|0 \cdot \frac{t}{2\sqrt{un}} - 1\cdot \sqrt{\frac{u}{n}}\right| \\[6pt]
+&= \sqrt{\frac{u}{n}}
+\end{align}
+$$
+
+したがって $U, T$ の同時分布 $f(u, t)$ は,
+$$
+\begin{align}
+f(u, t) &= f(x, y)|J| \\[6pt]
+&= f_X(x)f_Y(y)\sqrt{\tfrac{u}{n}} \\[6pt]
+&= f_X(u)f_Y\!\left(\sqrt{\tfrac{u}{n}}\, t\right)\sqrt{\tfrac{u}{n}} \\[6pt]
+&= \frac{1}{2^{n/2}\Gamma\!\left(\tfrac{n}{2}\right)}u^{\tfrac{n}{2}-1}e^{-\tfrac{u}{2}}
+\frac{1}{\sqrt{2\pi}}e^{-\tfrac{u}{2n}t^2}\sqrt{\tfrac{u}{n}} \\[6pt]
+&= \frac{1}{\sqrt{2n\pi}2^{n/2}\Gamma\!\left(\tfrac{n}{2}\right)}
+u^{\tfrac{n-1}{2}} e^{-\tfrac{1}{2}u\left(1+\tfrac{t^2}{n}\right)}
+\end{align}
+$$
+
+ここで周辺化して $T$ の確率密度関数 $f_T(t)$ を求めると,
+$$
+\begin{align}
+f_T(t) &= \int_0^{\infty} f(u, t)\,du \\[6pt]
+&= \frac{1}{\sqrt{2n\pi}2^{n/2}\Gamma\!\left(\tfrac{n}{2}\right)} \int_0^{\infty} 
+u^{\tfrac{n-1}{2}} e^{-\tfrac{1}{2}u\left(1+\tfrac{t^2}{n}\right)}\, du
+\end{align}
+$$
+
+ここで指数部分を文字で置いて見通しを良くしましょう。
+- $a = \frac{n-1}{2}, b = \frac{1}{2}\left(1+\tfrac{t^2}{n}\right)$
+$$
+\begin{align}
+f_T(t) &= \frac{1}{\sqrt{2n\pi}2^{n/2}\Gamma\!\left(\tfrac{n}{2}\right)} \int_0^{\infty} 
+u^{a} e^{-bu}\, du \\[6pt]
+\end{align}
+$$
+
+この式の積分部分を $I$ とすると
+$$
+\begin{align}
+I &= \int_0^{\infty}u^{a} e^{-bu}\, du \\[6pt]
+
+\end{align}
+$$
+
+$z = bu$ で置換積分すると
+$$
+\begin{align}
+I &= \int_0^{\infty}\left(\frac{z}{b}\right)^{a} e^{-z}\frac{1}{b}\, dz \\[6pt]
+&= \frac{1}{b^{a+1}}\int_0^{\infty}z^ae^{-z}\,dz \\[6pt]
+&= \frac{1}{b^{a+1}}\int_0^{\infty}z^{(a+1)-1}e^{-z}\,dz
+\end{align}
+$$
+==**ガンマ関数**== の定義より,
+$$
+\begin{align}
+I &= \frac{1}{b^{a+1}}\Gamma\left(a+1\right) \\[6pt]
+&= \frac{1}{b^{a+1}}\Gamma\left(\tfrac{n+1}{2}\right)
+\end{align}
+$$
+
+さて $f_T(t)$ は,
+
+$$
+\begin{align}
+f_T(t) &= \frac{1}{\sqrt{2n\pi}2^{n/2}\Gamma\!\left(\tfrac{n}{2}\right)}
+\frac{1}{b^{a+1}}\Gamma\left(\tfrac{n+1}{2}\right)\\[6pt]
+
+&= \frac{1}{\sqrt{n\pi}2^{\tfrac{n+1}{2}}\Gamma\!\left(\tfrac{n}{2}\right)}
+\frac{1}{b^{\tfrac{n+1}{2}}}\Gamma\left(\tfrac{n+1}{2}\right)\\[6pt]
+
+&= \frac{1}{\sqrt{n\pi}\Gamma\!\left(\tfrac{n}{2}\right)}
+\Gamma\left(\tfrac{n+1}{2}\right) (2b)^{-\tfrac{n+1}{2}}\\[6pt]
+
+&= \frac{\Gamma\left(\tfrac{n+1}{2}\right)}{\sqrt{n\pi}\Gamma\!\left(\tfrac{n}{2}\right)}
+ \left(1+\tfrac{t^2}{n}\right)^{-\tfrac{n+1}{2}}\\[6pt]
+\end{align} 
+$$
+
+導出終了.
+:::
+
 
 ## 2. 累積分布関数
 ::: def 累積分布関数 (CDF)

@@ -58,7 +58,7 @@ $blue-gray: #64748b; /* 文字/参考系 */
 .custom-container.ref   { @include box27($blue-gray); }
 
 /* 暗色で眩しい場合だけ少し減彩 */
-html.dark {
-  .custom-container.expl { @include box27(color.adjust($blue-300, $lightness: 6%)); }
-  .custom-container.def  { @include box27(color.adjust($blue-400, $lightness: 6%)); }
-}
+// html.dark {
+//   .custom-container.expl { @include box27(color.adjust($blue-300, $lightness: 6%)); }
+//   .custom-container.def  { @include box27(color.adjust($blue-400, $lightness: 6%)); }
+// }

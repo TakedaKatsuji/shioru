@@ -4,7 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap");
 
 :root { --hero-title-bg: rgba(60, 102, 168, 0.1); }   /* light */
-html.dark { --hero-title-bg: rgba(60, 102, 168, 0.16); } /* dark */
+// html.dark { --hero-title-bg: rgba(60, 102, 168, 0.16); } /* dark */
 
 .vp-blog-hero-title {
   font-family: "Shippori Mincho", "Hiragino Mincho ProN", "Yu Mincho", "游明朝", serif !important;
@@ -53,10 +53,10 @@ p {
   --h2-underline: #3b82f6;
   --h3-underline: #60a5fa;
 }
-html.dark{
-  --h2-underline: #60a5fa;
-  --h3-underline: #93c5fd;
-}
+// html.dark{
+//   --h2-underline: #60a5fa;
+//   --h3-underline: #93c5fd;
+// }
 
 /* h2 */
 h2 span {
@@ -126,10 +126,10 @@ h4 span {
   --mark-bg: rgba(255,245,157,.82); /* light */
   --mark-cut: 52%;                  /* どこから塗るか */
 }
-html.dark {
-  --mark-bg: rgba(255,245,157,.14); /* dark */
-  --mark-cut: 72%;
-}
+// html.dark {
+//   --mark-bg: rgba(255,245,157,.14); /* dark */
+//   --mark-cut: 72%;
+// }
 
 :where(p, li, dd, blockquote) mark{
   color: currentColor;

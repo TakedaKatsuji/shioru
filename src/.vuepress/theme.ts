@@ -6,23 +6,23 @@ import { enSidebar } from "./sidebar/index.js";
 import { containerPlugin } from "@vuepress/plugin-container"
 
 export default hopeTheme({
-  hostname: "https://mister-hope.github.io",
+  hostname: "http://shioru.jp/intro.html",
 
   author: {
     name: "Takeda Katsuji",
-    url: "https://mister-hope.com",
+    url: "http://shioru.jp/intro.html",
   },
 
   logo: "/sub-logo.png",
 
-  repo: "vuepress-theme-hope/vuepress-theme-hope",
+  repo: "https://github.com",
 
   docsDir: "src",
 
   blog: {
     medias: {
-      GitHub: "https://example.com",
-      Gmail: "mailto:info@example.com",
+      GitHub: "https://github.com",
+      Gmail: "mailto:shioru.stats@gmail.com",
       Qiita: {
         icon: "https://shioru.jp/assets/icon/qiita-icon.png",
         link: "https://qiita.com/katsujitakeda",
@@ -44,7 +44,7 @@ export default hopeTheme({
       // sidebar
       sidebar: enSidebar,
 
-      footer: "Default footer",
+      footer: "©栞る数理統計",
 
       displayFooter: true,
 

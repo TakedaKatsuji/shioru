@@ -5,6 +5,11 @@ sticky: 3
 timeline: false
 ---
 
+
+<div style="display: flex; gap: 10px; justify-content: center;">
+  <img src="/assets/images/test/thumbnail.png" style="max-width: 100%; height: auto;">
+</div>
+
 ## 連続修正
 
 <div class="vp-card-container">

@@ -9,7 +9,7 @@ bgImageStyle:
   background-color: "rgba(0,0,0,0.3)"   # 半透明の黒を重ねる
   background-blend-mode: multiply       # 画像と合成
 heroText: 栞る数理統計
-tagline: 栞を挟み、知を紡ぐ
+tagline: しおるすうりとうけい
 heroFullScreen: false
 projects:
 

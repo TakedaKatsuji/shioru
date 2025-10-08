@@ -43,6 +43,12 @@ timeline: false
   desc="PDF・CDF・期待値・分散"
   link="/posts/probability_distribution/t.html"
 />
+
+<VPCard
+  title="カイ二乗分布"
+  desc="PDF・CDF・期待値・分散"
+  link="/posts/probability_distribution/chi2.html"
+/>
 </div>
 
 ## 確率分布の性質

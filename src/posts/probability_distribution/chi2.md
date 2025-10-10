@@ -251,6 +251,31 @@ $$
 
 ## 6. 再生性
 
+:::def
+再生性は積率母関数を使うと簡単に証明できます。
+確率変数 $X, Y$は独立に自由度 $n, m$ のカイ二乗分布に従うとき,
+$$
+\begin{align}
+X \sim \chi2(n)\quad, Y \sim \chi2(m)
+\end{align}
+$$
 
-執筆中...
+$Z = X + Y$, それぞれの積率母関数 $M_X(t), M_Y(t), M_Z(t)$ として
+積率母関数の性質より $X,Y$ が独立のとき
+$$
+\begin{align}
+M_Z(t) &= M_X(t) \cdot M_Y(t) \\[6pt]
+&= \left(1-2t\right)^{-\frac{n}{2}} \cdot \left(1-2t\right)^{-\frac{m}{2}} \\[6pt]
+&= \left(1-2t\right)^{-\frac{n+m}{2}}
+\end{align}
+$$ 
+
+これは自由度 $n+m$ のカイ二乗分布の積率母関数であり, ==積率母関数の一意性から==,
+$$
+\begin{align}
+Z \sim \chi2(n+m)
+\end{align}
+$$
+同様に $m$ 個の独立な $\chi2(k_i)$ の和も $\chi2\!\left(\sum_{i=1}^m k_i\right)$ に従う.
+:::
 

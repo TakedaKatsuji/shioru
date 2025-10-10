@@ -49,6 +49,13 @@ timeline: false
   desc="PDF・CDF・期待値・分散"
   link="/posts/probability_distribution/chi2.html"
 />
+
+<VPCard
+  title="ガンマ分布"
+  desc="PDF・CDF・期待値・分散"
+  link="/posts/probability_distribution/gamma.md"
+/>
+
 </div>
 
 ## 確率分布の性質

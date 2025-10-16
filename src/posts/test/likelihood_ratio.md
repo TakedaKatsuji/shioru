@@ -65,6 +65,5 @@ $\Lambda$ が小さいほど $D$ は大きく，$D\sim\chi^2(n)$より，上側�
 執筆中...
 
 ## 参考文献
-- [現代数理統計学](https://amzn.to/46UzNM9)
-- [現代数理統計学の基礎](https://amzn.to/3W6W3ME)
-- [統計検定準1級対応 統計学実践ワークブック](https://amzn.to/46QExlU)
+
+<AffiliateBook id="takemura_gen_stats"/>

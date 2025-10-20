@@ -10,6 +10,8 @@ timeline: false
   <img src="/assets/images/grade1_1/2013/thumbnail.png" style="max-width: 100%; height: auto;">
 </div>
 
+<AffiliateBook id="kakomon1213"/>
+
 <div class="vp-card-container">
 
 <VPCard
@@ -35,6 +37,4 @@ timeline: false
   desc="ウィルコクソンの符号順位検定・正規近似"
   link="/posts/grade1_1/2013/4.md"
 />
-
 </div>
-

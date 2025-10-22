@@ -37,4 +37,10 @@ timeline: false
   desc="ウィルコクソンの符号順位検定・正規近似"
   link="/posts/grade1_1/2013/4.md"
 />
+
+<VPCard
+  title="統計数理 [5]"
+  desc="尤度比検定・適合度のカイ二乗検定"
+  link="/posts/grade1_1/2013/5.md"
+/>
 </div>

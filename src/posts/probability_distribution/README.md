@@ -69,3 +69,13 @@ timeline: false
 />
 
 </div>
+
+## 極限定理
+<div class="vp-card-container">
+
+<VPCard
+  title="マルコフの不等式"
+  desc="マルコフの不等式の証明"
+  link="/posts/probability_distribution/markov.html"
+/>
+</div>

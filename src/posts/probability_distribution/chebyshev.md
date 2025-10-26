@@ -40,6 +40,16 @@ $$
 証明はマルコフの不等式から簡単に導けます.
 :::
 
+<div class="vp-card-container">
+
+<VPCard
+  title="マルコフの不等式"
+  desc="マルコフの不等式の証明"
+  link="/posts/probability_distribution/markov.html"
+/>
+
+</div>
+
 :::proof
 マルコフの不等式より，非負の確率変数 $Y \ge 0$ と $t>0$ に対して
 $$

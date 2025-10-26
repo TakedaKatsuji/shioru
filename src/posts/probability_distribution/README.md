@@ -78,4 +78,10 @@ timeline: false
   desc="マルコフの不等式の証明"
   link="/posts/probability_distribution/markov.html"
 />
+
+<VPCard
+  title="チェビシェフの不等式"
+  desc="チェビシェフの不等式の証明"
+  link="/posts/probability_distribution/chebyshev.html"
+/>
 </div>

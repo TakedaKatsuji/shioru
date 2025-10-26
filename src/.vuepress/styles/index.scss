@@ -2,6 +2,8 @@
 @use "./cards";
 @use "./box";
 @use "./affiliate";
+@use "./download";
+
 
 :root { --hero-title-bg: rgba(60, 102, 168, 0.1); }   /* light */
 // html.dark { --hero-title-bg: rgba(60, 102, 168, 0.16); } /* dark */

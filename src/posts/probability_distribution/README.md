@@ -75,13 +75,18 @@ timeline: false
 
 <VPCard
   title="マルコフの不等式"
-  desc="マルコフの不等式の証明"
+  desc="マルコフの不等式の証明と解説"
   link="/posts/probability_distribution/markov.html"
 />
 
 <VPCard
   title="チェビシェフの不等式"
-  desc="チェビシェフの不等式の証明"
+  desc="チェビシェフの不等式の証明と解説"
   link="/posts/probability_distribution/chebyshev.html"
+/>
+<VPCard
+  title="大数の弱法則"
+  desc="大数の弱法則の証明と解説"
+  link="/posts/probability_distribution/weak_law_of_large_numbers.html"
 />
 </div>

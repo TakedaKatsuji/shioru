@@ -9,7 +9,7 @@ export const enNavbar: NavbarOptions = navbar([
     prefix: "/posts/",
     children: [
       {
-        text: "統計検定1級-数理統計",
+        text: "統計検定1級 統計数理 過去問解説",
         icon: "meteor-icons:folder",
         prefix: "grade1_1/",
         children: [
@@ -17,32 +17,13 @@ export const enNavbar: NavbarOptions = navbar([
         ],
       },
       {
-        text: "確率分布",
+        text: "数理統計学",
         icon: "meteor-icons:folder",
-        prefix: "probability_distribution/",
+        prefix: "",
         children: [
-          { text: "一様分布", icon: "meteor-icons:feather",link: "uniform.md"},
-          { text: "標準正規分布の性質", icon: "meteor-icons:feather",link: "standard_normal1.md"},
-          { text: "標準正規分布の k 次モーメント", icon: "meteor-icons:feather",link: "standard_normal2.md"},
-          { text: "正規分布", icon: "meteor-icons:feather",link: "normal.md"},
-        ],
-      },
-      {
-        text: "多次元分布",
-        icon: "meteor-icons:folder",
-        prefix: "multivariate_distribution/",
-        children: [
-          { text: "共分散", icon: "meteor-icons:feather",link: "covariance.md"},
-          { text: "相関係数", icon: "meteor-icons:feather",link: "correlation_coefficient.md"},
-          { text: "2次元正規分布の条件付き分布", icon: "meteor-icons:feather",link: "normal_cpd.md"},
-        ],
-      },
-      {
-        text: "仮説検定手法",
-        icon: "meteor-icons:folder",
-        prefix: "test/",
-        children: [
-          { text: "半整数補正", icon: "meteor-icons:feather",link: "continuity_correction.md"},
+          { text: "確率分布", icon: "meteor-icons:folder",link: "probability_distribution/README.md"},
+          { text: "多次元分布", icon: "meteor-icons:folder",link: "multivariate_distribution/README.md"},
+          { text: "仮説検定手法", icon: "meteor-icons:folder",link: "test/README.md"},
         ],
       },
     ],

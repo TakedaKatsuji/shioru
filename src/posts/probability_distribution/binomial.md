@@ -9,13 +9,12 @@ tag:
   - 確率密度関数
   - 離散型
 
+cover: "/assets/images/probability_distribution/binomial/thumbnail.png" 
 ---
 
-# 二項分布の性質
+<!-- more -->
 
-<div style="display: flex; gap: 10px; justify-content: center;">
-  <img src="/assets/images/probability_distribution/binomial/thumbnail.png" style="max-width: 100%; height: auto;">
-</div>
+# 二項分布の性質
 
 
 ::: expl

@@ -11,13 +11,16 @@ tag:
   - 極限定理
   - 中心極限定理
   - チェビシェフの不等式
+cover: "/assets/images/probability_distribution/chebyshev/thumbnail.png"
 ---
+
+<!-- more -->
 
 # チェビシェフの不等式
 
-<div style="display: flex; gap: 10px; justify-content: center;">
+<!-- <div style="display: flex; gap: 10px; justify-content: center;">
   <img src="/assets/images/probability_distribution/chebyshev/thumbnail.png" style="max-width: 100%; height: auto;">
-</div>
+</div> -->
 
 :::def
 **チェビシェフの不等式（Chebyshev’s inequality）**  

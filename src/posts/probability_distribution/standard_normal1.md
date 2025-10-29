@@ -20,9 +20,9 @@ tag:
 </div>
 
 ::: expl
-この記事では標準正規分布の $t$ 次モーメントを既知とします。
+この記事では標準正規分布の $t$ 次モーメントを既知とします.
 
-詳しく知りたい方は[➡標準正規分布の $t$ 次モーメント](/posts/probability_distribution/standard_normal2.md)をご覧ください。
+詳しく知りたい方は[➡標準正規分布の $t$ 次モーメント](/posts/probability_distribution/standard_normal2.md)をご覧ください.
 
 正規分布のうち，平均が $0$，分散が $1$ の場合を特に **標準正規分布** といいます．  
 :::

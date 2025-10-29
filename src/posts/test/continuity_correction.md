@@ -10,12 +10,12 @@ tag:
   - 正規近似
   - 連続修正
   - 半整数補正
+cover: "/assets/images/test/continuity_crrection/thumbnail.png" 
 ---
 
+<!-- more -->
+
 # 半整数補正
-<div style="display: flex; gap: 10px; justify-content: center;">
-  <img src="/assets/images/test/continuity_crrection/thumbnail.png" style="max-width: 100%; height: auto;">
-</div>
 
 半整数補正とは二項分布などの離散型分布を正規近似で連続型の分布に近似するときに==近似精度を上げる==方法です.
 この記事ではグラフやアニメーションとともに、この近似がどの程度有効か議論していきたいと思います.
@@ -120,3 +120,7 @@ Non CC と CC で Exact との差をプロットすると以下になる.
 - 例として $c=2$ の設定では，誤差は $p=(c+\tfrac12)/n=0.05$ 付近で最大化しやすく，CC による改善が明瞭に観察できます．
 - 実務では 半整数補正を利用するのをお勧めします.
 :::
+
+## 参考文献
+<AffiliateBook id="official1"/>
+<AffiliateBook id="takemura_gen_stats"/>

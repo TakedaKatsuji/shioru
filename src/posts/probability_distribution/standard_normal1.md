@@ -10,14 +10,12 @@ tag:
   - 確率密度関数
   - 連続型
 
+cover: "/assets/images/probability_distribution/standard_normal/thumbnail.png"
 ---
 
+<!-- more -->
 
 # 標準正規分布の性質
-
-<div style="display: flex; gap: 10px; justify-content: center;">
-  <img src="/assets/images/probability_distribution/standard_normal/thumbnail.png" style="max-width: 100%; height: auto;">
-</div>
 
 ::: expl
 この記事では標準正規分布の $t$ 次モーメントを既知とします.
@@ -191,3 +189,7 @@ $$
 \varphi_Z(t) = M_Z(it) = \exp\!\left(-\tfrac{1}{2}t^2\right)
 $$
 :::
+
+## 参考文献
+<AffiliateBook id="official1"/>
+<AffiliateBook id="takemura_gen_stats"/>

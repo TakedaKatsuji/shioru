@@ -9,13 +9,12 @@ tag:
   - 分散共分散行列
   - 独立
 icon: meteor-icons:feather
+cover: "/assets/images/multivariate_distribution/covariance/thumbnail.png" 
 ---
 
-# 共分散の性質まとめ
+<!-- more -->
 
-<div style="display: flex; gap: 10px; justify-content: center;">
-  <img src="/assets/images/multivariate_distribution/covariance/thumbnail.png" style="max-width: 100%; height: auto;">
-</div>
+# 共分散の性質まとめ
 
 ## 共分散の定義
 ::: def
@@ -190,3 +189,6 @@ $$
 \end{align}
 $$
 :::
+
+## 参考文献
+<AffiliateBook id="takemura_gen_stats"/>

@@ -8,13 +8,12 @@ tag:
   - 正規分布
   - 確率密度関数
   - 連続型
+cover: "/assets/images/probability_distribution/normal/thumbnail.png"
 ---
 
-# 正規分布の性質
+<!-- more -->
 
-<div style="display: flex; gap: 10px; justify-content: center;">
-  <img src="/assets/images/probability_distribution/normal/thumbnail.png" style="max-width: 100%; height: auto;">
-</div>
+# 正規分布の性質
 
 ::: expl
 正規分布は **線形変換で閉じている分布** です.  
@@ -314,3 +313,7 @@ $$
 \varphi_X(t) = M_X(it) = \exp\!\left(i\mu t - \tfrac{1}{2}\sigma^2 t^2\right)
 $$
 :::
+
+## 参考文献
+<AffiliateBook id="official1"/>
+<AffiliateBook id="takemura_gen_stats"/>

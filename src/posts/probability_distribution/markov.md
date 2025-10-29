@@ -11,13 +11,12 @@ tag:
   - 極限定理
   - 中心極限定理
   - チェビシェフの不等式
+cover: "/assets/images/probability_distribution/markov/thumbnail.png"
 ---
 
-# マルコフの不等式
+<!-- more -->
 
-<div style="display: flex; gap: 10px; justify-content: center;">
-  <img src="/assets/images/probability_distribution/markov/thumbnail.png" style="max-width: 100%; height: auto;">
-</div>
+# マルコフの不等式
 
 ## マルコフの不等式の証明
 
@@ -94,4 +93,5 @@ $$
 グラフからもわかるように常に $\frac{1}{k}$ で上から抑えられています.
 
 ## 参考文献
+<AffiliateBook id="official1"/>
 <AffiliateBook id="takemura_gen_stats"/>

@@ -3,6 +3,7 @@ title: 統計検定1級 統計数理
 star: true
 sticky: 2
 timeline: false
+cover: /assets/images/grade1_1/thumbnail.png
 ---
 ## 2013年
 

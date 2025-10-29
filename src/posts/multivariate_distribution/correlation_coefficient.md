@@ -8,13 +8,12 @@ tag:
   - 相関係数
   - 偏相関係数
   - 共分散
+cover: "/assets/images/multivariate_distribution/correlation_coefficient/thumbnail.png" 
 ---
 
-# 相関係数の性質まとめ
+<!-- more -->
 
-<div style="display: flex; gap: 10px; justify-content: center;">
-  <img src="/assets/images/multivariate_distribution/correlation_coefficient/thumbnail.png" style="max-width: 100%; height: auto;">
-</div>
+# 相関係数の性質まとめ
 
 ::: expl
 相関係数とは二つ以上の確率変数の間にある関係の強弱を表す指標で、$-1 \leq \rho \leq 1$ を満たします.
@@ -167,3 +166,6 @@ $$
 
 計算量が一気に減り，**線形性を使うのが有効**であることが分かります.
 :::
+
+## 参考文献
+<AffiliateBook id="takemura_gen_stats"/>

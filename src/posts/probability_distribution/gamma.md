@@ -11,13 +11,12 @@ tag:
   - 連続型
   - ベータ関数
   - ガンマ関数
+cover: "/assets/images/probability_distribution/gamma/thumbnail.png"
 ---
 
-# ガンマ二乗分布の性質
+<!-- more -->
 
-<div style="display: flex; gap: 10px; justify-content: center;">
-  <img src="/assets/images/probability_distribution/gamma/thumbnail.png" style="max-width: 100%; height: auto;">
-</div>
+# ガンマ二乗分布の性質
 
 ::: expl
 ==ガンマ分布は**指数分布の和**で定義されます.==
@@ -247,3 +246,7 @@ $$
 同様に $m$ 個の独立な $\mathrm{Gamma}(k_i,\theta)$ の和も $\mathrm{Gamma}\!\left(\sum_{i=1}^m k_i,\theta\right)$ に従う.
 :::
 
+
+## 参考文献
+<AffiliateBook id="official1"/>
+<AffiliateBook id="takemura_gen_stats"/>

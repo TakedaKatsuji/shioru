@@ -231,3 +231,7 @@ $$
 =\bigl((1-p)+p e^{i\omega}\bigr)^n.
 $$
 :::
+
+## 参考文献
+<AffiliateBook id="official1"/>
+<AffiliateBook id="takemura_gen_stats"/>

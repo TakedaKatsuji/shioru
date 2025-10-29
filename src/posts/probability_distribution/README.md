@@ -3,11 +3,10 @@ title: 確率分布
 star: true
 sticky: 0
 timeline: false
+cover: /assets/images/probability_distribution/thumbnail.png
 ---
 
-<div style="display: flex; gap: 10px; justify-content: center;">
-  <img src="/assets/images/probability_distribution/thumbnail.png" style="max-width: 100%; height: auto;">
-</div>
+<!-- more -->
 
 ## 確率分布の基本
 

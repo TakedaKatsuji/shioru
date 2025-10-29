@@ -3,12 +3,13 @@ title: 多次元分布
 star: true
 sticky: 1
 timeline: false
+cover: "/assets/images/multivariate_distribution/thumbnail.png" 
 ---
+
+<!-- more -->
+
 ## 多次元分布 記事一覧
 
-<div style="display: flex; gap: 10px; justify-content: center;">
-  <img src="/assets/images/multivariate_distribution/thumbnail.png" style="max-width: 100%; height: auto;">
-</div>
 
 <div class="vp-card-container">
 

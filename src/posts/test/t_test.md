@@ -12,14 +12,12 @@ tag:
   - ウェルチのt検定
   - パラメトリック
   - 正規分布
+cover: "/assets/images/test/t_test/thumbnail.png" 
 ---
 
+<!-- more -->
 
 # t検定について概要解説
-
-<div style="display: flex; gap: 10px; justify-content: center;">
-  <img src="/assets/images/test/t_test/thumbnail.png" style="max-width: 100%; height: auto;">
-</div>
 
 統計検定の過去問題でt検定は頻出します.t検定には複数種類がありますが本質は ==**母平均に関する検定**== であるということです.
 
@@ -266,3 +264,7 @@ $t=3.13>1.699$ より $H_0$ を棄却
 ::: ans 結論
 平均HbA1cは $7.0\%$ より有意に高い.
 :::
+
+## 参考文献
+<AffiliateBook id="official1"/>
+<AffiliateBook id="takemura_gen_stats"/>

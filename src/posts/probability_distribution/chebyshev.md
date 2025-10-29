@@ -1,6 +1,7 @@
 ---
 date: 2025-10-26
 icon: meteor-icons:feather
+title: チェビシェフの不等式
 category:
   - 統計数理
   - 確率分布
@@ -11,16 +12,10 @@ tag:
   - 極限定理
   - 中心極限定理
   - チェビシェフの不等式
-cover: "/assets/images/probability_distribution/chebyshev/thumbnail.png"
+cover: "/assets/images/probability_distribution/chebyshev/thumbnail1.png"
 ---
 
 <!-- more -->
-
-# チェビシェフの不等式
-
-<!-- <div style="display: flex; gap: 10px; justify-content: center;">
-  <img src="/assets/images/probability_distribution/chebyshev/thumbnail.png" style="max-width: 100%; height: auto;">
-</div> -->
 
 :::def
 **チェビシェフの不等式（Chebyshev’s inequality）**  
@@ -35,6 +30,7 @@ $$
 :::
 
 ## チェビシェフの不等式の証明
+
 :::expl
 チェビシェフの不等式は ==**平均値(期待値)から $k\sigma$ 以上ずれる確率は高々 $\frac{1}{k^2}$**== を表す不等式です.
 
@@ -126,4 +122,5 @@ CSVデータをダウンロード
 - データ
   - [共通テスト 令和５年度 試験情報データ（本試験）](https://www.dnc.ac.jp/kyotsu/hyouka/r5_hyouka/r5_data.html)
 - 書籍
-<AffiliateBook id="takemura_gen_stats"/>
+  <AffiliateBook id="official1"/>
+  <AffiliateBook id="takemura_gen_stats"/>

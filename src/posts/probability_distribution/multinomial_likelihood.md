@@ -11,9 +11,14 @@ tag:
   - 確率密度関数
   - 連続型
 
+cover: "/assets/images/probability_distribution/multinomial/thumbnail2.png"
 ---
 
+<!-- more -->
+
 # 多項分布の最尤推定量
+
+## 導出
 :::def
 ==多項分布の確率質量関数==
 $$
@@ -92,3 +97,7 @@ $$
 \hat \theta_i = \frac{x_i}{n}
 $$
 :::
+
+## 参考文献
+<AffiliateBook id="official1"/>
+<AffiliateBook id="takemura_gen_stats"/>

@@ -11,13 +11,12 @@ tag:
   - 連続型
   - ベータ関数
   - ガンマ関数
+cover: "/assets/images/probability_distribution/t/thumbnail.png"
 ---
 
-# t分布の性質
+<!-- more -->
 
-<div style="display: flex; gap: 10px; justify-content: center;">
-  <img src="/assets/images/probability_distribution/t/thumbnail.png" style="max-width: 100%; height: auto;">
-</div>
+# t分布の性質
 
 **t分布**は ==分散が未知の場合の仮説検定でよく使用される分布== です.
 
@@ -367,3 +366,7 @@ $$
 ゆえに $n>2$ で $\mathrm{V}[T]=\dfrac{n}{n-2}$. 一方 $1<n\le2$ はベータ積分が発散し分散は未定義. $n\le1$ は平均も未定義.
 
 :::
+
+## 参考文献
+<AffiliateBook id="official1"/>
+<AffiliateBook id="takemura_gen_stats"/>

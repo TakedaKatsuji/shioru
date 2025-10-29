@@ -8,12 +8,12 @@ tag:
   - 一様分布
   - 確率密度関数
   - 連続型
+cover: "/assets/images/probability_distribution/uniform/thumbnail.png"
 ---
 
+<!-- more -->
+
 # 一様分布の性質
-<div style="display: flex; gap: 10px; justify-content: center;">
-  <img src="/assets/images/probability_distribution/uniform/thumbnail.png" style="max-width: 100%; height: auto;">
-</div>
 
 ## 1. 確率密度関数
 
@@ -227,3 +227,7 @@ $$
 \varphi_X(0) = \mathbb{E}[1] = 1.
 $$
 :::
+
+## 参考文献
+<AffiliateBook id="official1"/>
+<AffiliateBook id="takemura_gen_stats"/>

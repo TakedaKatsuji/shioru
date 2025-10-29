@@ -11,13 +11,12 @@ tag:
   - 連続型
   - ベータ関数
   - ガンマ関数
+cover: "/assets/images/probability_distribution/chi2/thumbnail.png"
 ---
 
-# カイ二乗分布の性質
+<!-- more -->
 
-<div style="display: flex; gap: 10px; justify-content: center;">
-  <img src="/assets/images/probability_distribution/chi2/thumbnail.png" style="max-width: 100%; height: auto;">
-</div>
+# カイ二乗分布の性質
 
 :::def
 カイ二乗分布は独立に[標準正規分布](/posts/probability_distribution/standard_normal1.md)に従う確率変数の二乗の和が従う分布です.
@@ -279,3 +278,7 @@ $$
 同様に $m$ 個の独立な $\chi2(k_i)$ の和も $\chi2\!\left(\sum_{i=1}^m k_i\right)$ に従う.
 :::
 
+
+## 参考文献
+<AffiliateBook id="official1"/>
+<AffiliateBook id="takemura_gen_stats"/>

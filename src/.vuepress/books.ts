@@ -16,7 +16,7 @@ export const BOOKS: Record<string, Book> = {
     rakuten: "https://a.r10.to/h54IFF",
     desc: "統計検定1級対策に定番の書籍 難易度は高めだが演習問題も豊富"
   },
-  official_1: {
+  official1: {
     title: "増訂版 日本統計学会公式認定 統計検定１級対応 統計学",
     author: "日本統計学会",
     img: "https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/4016/9784489024016_1_2.jpg?_ex=240x240",

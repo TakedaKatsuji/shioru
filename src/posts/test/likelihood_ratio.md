@@ -10,13 +10,12 @@ tag:
   - カイ二乗分布
   - 尤度比
   - 最尤推定量
+cover: "/assets/images/test/likelihood_ratio/thumbnail.png" 
 ---
 
-# 尤度比検定について徹底解説
+<!-- more -->
 
-<div style="display: flex; gap: 10px; justify-content: center;">
-  <img src="/assets/images/test/likelihood_ratio/thumbnail.png" style="max-width: 100%; height: auto;">
-</div>
+# 尤度比検定について徹底解説
 
 ## 尤度比検定の定義と内容
 
@@ -192,7 +191,7 @@ Wilks の定理より $D\ \overset{H_0}{\sim}\ \chi^2(3)$（大標本近似）
 > **結論:** $H_0$ は棄却しない.
 :::
 
-
 ## 参考文献
+
+<AffiliateBook id="official1"/>
 <AffiliateBook id="takemura_gen_stats"/>
-<AffiliateBook id="official_1"/>

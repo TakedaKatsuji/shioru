@@ -3,11 +3,9 @@ title: 仮説検定手法
 star: true
 sticky: 3
 timeline: false
+cover: "/assets/images/test/thumbnail.png" 
 ---
-
-<div style="display: flex; gap: 10px; justify-content: center;">
-  <img src="/assets/images/test/thumbnail.png" style="max-width: 100%; height: auto;">
-</div>
+<!-- more -->
 
 ## 検定手法
 

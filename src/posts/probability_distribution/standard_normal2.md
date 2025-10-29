@@ -11,14 +11,12 @@ tag:
   - 連続型
   - ガウス積分
 
+cover: "/assets/images/probability_distribution/standard_normal/thumbnail2.png"
 ---
 
+<!-- more -->
 
 # 標準正規分布の t 次モーメント
-
-<div style="display: flex; gap: 10px; justify-content: center;">
-  <img src="/assets/images/probability_distribution/standard_normal/thumbnail2.png" style="max-width: 100%; height: auto;">
-</div>
 
 ここでは，標準正規分布における $t$ 次モーメントを導出します．
 ::: def t 次モーメント
@@ -139,3 +137,7 @@ $$
 $$
 で与えられる．
 :::
+
+## 参考文献
+<AffiliateBook id="official1"/>
+<AffiliateBook id="takemura_gen_stats"/>

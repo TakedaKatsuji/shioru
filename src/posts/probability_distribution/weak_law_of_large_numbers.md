@@ -12,13 +12,12 @@ tag:
   - 中心極限定理
   - チェビシェフの不等式
   - 大数の弱法則
+cover: "/assets/images/probability_distribution/weak_law_of_large_numbers/thumbnail.png"
 ---
 
-# 大数の弱法則
+<!-- more -->
 
-<div style="display: flex; gap: 10px; justify-content: center;">
-  <img src="/assets/images/probability_distribution/weak_law_of_large_numbers/thumbnail.png" style="max-width: 100%; height: auto;">
-</div>
+# 大数の弱法則
 
 :::expl
 大数の弱法則とは，**たくさんの試行を平均すると，本当の平均（母平均）に近づく** という性質です．  
@@ -129,6 +128,6 @@ $$
 一方で，$t$ 分布（自由度2）は期待値が $0$ で存在するため，サンプル数を増やすにつれて平均が $0$ に収束していきます．  
 :::
 
-
 ## 参考文献
+<AffiliateBook id="official1"/>
 <AffiliateBook id="takemura_gen_stats"/>

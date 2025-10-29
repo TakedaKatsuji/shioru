@@ -10,14 +10,12 @@ tag:
   - 確率密度関数
   - 連続型
   - 条件付き分布
-
+cover: "/assets/images/multivariate_distribution/normal_cpd/thumbnail.png" 
 ---
 
-# 2次元正規分布の条件付き分布
+<!-- more -->
 
-<div style="display: flex; gap: 10px; justify-content: center;">
-  <img src="/assets/images/multivariate_distribution/covariance/thumbnail.png" style="max-width: 100%; height: auto;">
-</div>
+# 2次元正規分布の条件付き分布
 
 統計検定1級では**2次元正規分布の条件付き分布**がよく出てきます.  
 
@@ -186,3 +184,6 @@ $$
 :::
 
 ---
+
+## 参考文献
+<AffiliateBook id="takemura_gen_stats"/>

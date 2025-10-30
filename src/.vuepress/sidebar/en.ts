@@ -36,6 +36,13 @@ export const enSidebar = sidebar({
           collapsible: true,
           children: "structure"
         },
+        {
+          text: "解析学",
+          icon: "meteor-icons:folder",
+          prefix: "math/analysis/",
+          collapsible: true,
+          children: "structure"
+        },
       ],
     },
     "intro"

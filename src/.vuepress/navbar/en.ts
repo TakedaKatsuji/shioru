@@ -24,6 +24,7 @@ export const enNavbar: NavbarOptions = navbar([
           { text: "確率分布", icon: "meteor-icons:folder",link: "probability_distribution/README.md"},
           { text: "多次元分布", icon: "meteor-icons:folder",link: "multivariate_distribution/README.md"},
           { text: "仮説検定手法", icon: "meteor-icons:folder",link: "test/README.md"},
+          { text: "解析学", icon: "meteor-icons:folder",link: "math/analysis/README.md"},
         ],
       },
     ],

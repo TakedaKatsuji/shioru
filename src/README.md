@@ -28,10 +28,15 @@ projects:
     desc: 仮説検定について解説
     link: /posts/test/
 
-  - icon: pen-to-square
+  - icon: meteor-icons:folder 
     name: 統計検定1級 過去問解説
     desc: 分野別の解法・公式の解説
     link: /posts/grade1_1/
+
+  - icon: meteor-icons:folder 
+    name: 解析学
+    desc: 解析学の定理・公式
+    link: /posts/math/analysis
 
 footer: © 2025 栞る数理統計
 ---

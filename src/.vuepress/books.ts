@@ -61,4 +61,12 @@ export const BOOKS: Record<string, Book> = {
     rakuten: "https://a.r10.to/hP62u7",
     desc: "過去問2022年・2023年・2024年"
   },
+  fullscalemath: {
+    title: "妥協しないデータ分析のための 微積分+線形代数入門",
+    author: "杉山 聡",
+    img: "https://m.media-amazon.com/images/I/81baH+fIPtL._SY425_.jpg",
+    amazon: "https://amzn.to/3Jk4yB7",
+    rakuten: "https://a.r10.to/hPUESu",
+    desc: "微積分と線形代数の重要公式を背景と考え方から解説してある入門書です."
+  },
 }

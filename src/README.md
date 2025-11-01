@@ -36,7 +36,7 @@ projects:
   - icon: meteor-icons:folder 
     name: 解析学
     desc: 解析学の定理・公式
-    link: /posts/math/analysis
+    link: /posts/math/analysis/
 
 footer: © 2025 栞る数理統計
 ---

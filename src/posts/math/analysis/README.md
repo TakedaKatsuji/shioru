@@ -17,5 +17,4 @@ cover: /assets/images/math/analysis/thumbnail.png
   desc="ラグランジュの剰余項の証明・導出"
   link="/posts/math/analysis/lagrange_remainder.md"
 />
-
 </div>

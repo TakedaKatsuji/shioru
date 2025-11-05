@@ -143,3 +143,14 @@ h4 span {
 
 /* コード内は除外 */
 code mark, pre mark { background: none; padding: 0; }
+
+.table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table-wrapper table {
+  width: 100%;
+  min-width: 600px; /* 表の最小横幅を指定 */
+  border-collapse: collapse;
+}

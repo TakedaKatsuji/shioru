@@ -54,7 +54,28 @@ cover: "/assets/images/papers/GLCP/thumbnail.png"
 
 ## 方法
 このフレームワークは2つのIMS/DARの2種類のモジュールにわかれており ==**IMSがグローバルとローカル情報の抽出**==, ==**DARがIMSで取得した情報を用いてセグメンテーションマスクを精緻化**== を担当しています.
+
 ### Interactive Multi-head Segmentation (IMS)
+
+IMSはSegmentation/Skelton/Discontinuityの3つのHeadを持ちます。
+
+
+<div style="display: flex; gap: 10px; justify-content: center; padding-bottom: 20px; padding-top: 10px;">
+  <img src="/assets/images/papers/GLCP/IMS.png" style="max-width: 30%; height: auto;">
+</div>
+
+それぞれの役割は
+
+| Head 名称 | 記号 | 役割 | Layer | 出力 | 出力形状 |
+|------------|------|------|--------|--------|------------|
+| Segmentation Head | $H_g$ | 管状構造を予測したセグメンテーションマップを出力 | $\mathrm{Conv1D}$ | $\hat F_g$ | $[B, C, H, W]$ |
+| Skeleton Head | $H_s$ | 管状構造の中心線のみを予測した二値マップを出力 | $\mathrm{Conv1D}$ | $\hat F_s$ | $[B, 1, H, W]$ |
+| Discontinuity Head | $H_d$ | 「不連続になりやすい位置」を1とした局所的な二値マップを出力 | $\mathrm{Conv1D}$ | $\hat F_d$ | $[B, 1, H, W]$ |
+
+:::expl 
+:::
+
+
 ### Dual-Attention-based Refinement (DAR) 
 
 執筆中...

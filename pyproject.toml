@@ -12,5 +12,6 @@ dependencies = [
     "numpy>=2.3.3",
     "opencv-python>=4.11.0.86",
     "polars[all]>=1.33.1",
+    "scikit-image>=0.25.2",
     "seaborn>=0.13.2",
 ]

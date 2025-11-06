@@ -19,7 +19,7 @@ cover: "/assets/images/papers/GLCP/thumbnail.png"
 ==**GLCP: Global-to-Local Connectivity Preservation for Tubular Structure Segmentation**== を紹介します。
 
 :::warning
-本記事で使用している画像は元論文・公式HPから引用しています.
+本記事で使用している一部の画像は元論文・公式HPから引用しています.
 - [論文リンク](https://papers.miccai.org/miccai-2025/paper/1868_paper.pdf)
 - [github](https://github.com/FeixiangZhou/GLCP)
 :::
@@ -109,8 +109,42 @@ IMSはSegmentation/Skelton/Discontinuityの3つのHeadを持ちます。
    \tilde P_g = \{\hat p_i \in \hat P_g \mid \hat d_i > \hat \tau\}
    $$
    と定義する．
+5. 3-4を対照的に $P_g$方向から見ると
+   $$
+   \bar P_g = \{ p_i \in  P_g \mid  \bar d_i >  \bar \tau\}
+   $$
+  
+6. 二つの不連続点候補集合の和集合をとり, $\mathrm{DBSCAN}$ でまとめる
+   $$
+   \begin{align}
+   P^\prime &= \tilde P_g \cup \bar P_g \\[6pt]
+   &\stackrel{\mathrm{DBSCAN}}{\to} P
+   \end{align}
+   $$
 :::
 
+このプロセスを経て不連続点集合は二次元、三次元の点の集合であるため、学習するには疎で不安定です。
+そこで以下の式で点を膨張させます.
+$$
+\begin{align}
+R_i = \set{(x,y,z)| |x-p_i^x| \leq w_x/2, |y-p_i^y| \leq w_y/2, |z-p_i^z| \leq w_z/2}
+\end{align}
+$$
+
+この式は点を長方形で囲むことを表しています。$w$は長方形の幅で$p_i$は各点の座標です.
+
+<div style="display: flex; gap: 10px; justify-content: center; padding-bottom: 20px; padding-top: 10px;">
+  <img src="/assets/images/papers/GLCP/R.png" style="max-width: 100%; height: auto;">
+</div>
+
+これらから得られるマップから一貫性損失を以下の用に定義します.
+$$
+\begin{align}
+L_{con} = \mathrm{KL}(\sigma(\hat F_g)\otimes \hat S_g,\, \psi(\hat F_s)) +\mathrm{KL}(\hat F_s,\, \psi(\sigma(\hat F_g)\otimes \hat S_g))
+\end{align}
+$$
+
+$\sigma(\cdot)$ はシグモイドやソフトマックスなどの確率化関数, $\psi(\cdot)$ は勾配のトランケーション
 
 ### Dual-Attention-based Refinement (DAR) 
 

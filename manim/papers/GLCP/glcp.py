@@ -12,88 +12,80 @@ class EndpointFigure(Scene):
         self.play(Write(title))
 
         # 左右パネルの枠
-        left_panel = Rectangle(width=5.5, height=4, color=WHITE).to_edge(LEFT, buff=0.4).shift(DOWN*0.3)
-        right_panel = Rectangle(width=5.5, height=4, color=WHITE).to_edge(RIGHT, buff=0.4).shift(DOWN*0.3)
-        self.play(Create(left_panel), Create(right_panel))
+        left_panel = Rectangle(width=5.5, height=4, color=WHITE).to_edge(LEFT, buff=0.4).shift(DOWN*0.3+RIGHT)
+        right_panel = Rectangle(width=5.5, height=4, color=WHITE).to_edge(RIGHT, buff=0.4).shift(DOWN*0.3+LEFT)
+        left_title = MathTex(r"F_s").move_to(left_panel.get_top()+0.5*UP)
+        right_title = MathTex(r"\hat S_g").move_to(right_panel.get_top()+0.5*UP)
+        block = VGroup(left_title,left_panel, right_title, right_panel)
+        self.play(FadeIn(block))
 
-        #
-        # 左: predicted skeleton  \hat P_g
-        #
-        # スケルトンの折れ線（だいたい図と似せる）
-        # 画面座標に合わせて少しずつ調整するとよい
+        # ===== GT Skelton ==== 
         lp_origin = left_panel.get_center()
 
-        # メインの折れ線（上から右へ→下へ）
-        pred_path1 = VGroup(
-            Line(lp_origin + LEFT*1.9 + UP*0.8, lp_origin + LEFT*0.8 + UP*0.4, color=WHITE),
-            Line(lp_origin + LEFT*0.8 + UP*0.4, lp_origin + RIGHT*0.2 + UP*0.3, color=WHITE),
-            Line(lp_origin + RIGHT*0.2 + UP*0.3, lp_origin + RIGHT*1.5 + UP*1.0, color=WHITE),
-        )
-        # 下方向の枝
-        pred_branch = Line(lp_origin + RIGHT*0.2 + UP*0.3, lp_origin + RIGHT*0.2 + DOWN*1.2, color=WHITE)
-        # 右上に伸びる枝
-        pred_branch2 = Line(lp_origin + RIGHT*1.0 + UP*0.6, lp_origin + RIGHT*2.0 + UP*1.0, color=WHITE)
+        left_points = [
+            [lp_origin+UP*1.5, lp_origin],
+            [lp_origin,lp_origin+LEFT+DOWN],
+            [lp_origin,lp_origin+DR*0.5],
+            [lp_origin+DR*0.5, lp_origin+DR*0.5+DOWN*0.5+LEFT*0.25],
+            [lp_origin+DR*0.5, lp_origin+DR*0.5+DOWN*0.5+RIGHT*0.25],
+            ]
 
-        pred_skel = VGroup(pred_path1, pred_branch, pred_branch2)
-        self.play(Create(pred_skel))
-
-        # 端点 (cyan)
-        # \hat p_1, \hat p_2, \hat p_3, \hat p_4, \hat p_5
-        hat_p1 = Dot(lp_origin + LEFT*1.9 + UP*0.8, color=TEAL)
-        hat_p2 = Dot(lp_origin + RIGHT*0.2 + UP*0.3, color=TEAL)
-        hat_p3 = Dot(lp_origin + RIGHT*2.0 + UP*1.0, color=TEAL)
-        hat_p4 = Dot(lp_origin + RIGHT*1.0 + UP*0.6, color=TEAL)
-        hat_p5 = Dot(lp_origin + RIGHT*0.2 + DOWN*1.2, color=TEAL)
-
-        self.play(
-            FadeIn(hat_p1),
-            FadeIn(hat_p2),
-            FadeIn(hat_p3),
-            FadeIn(hat_p4),
-            FadeIn(hat_p5),
+        gt_path1 = VGroup(
+            Line(points[0], points[1], color=WHITE) for points in left_points
         )
 
-        # ラベル
-        label_hat_p1 = MathTex(r"\hat p_1", color=WHITE).scale(0.6).next_to(hat_p1, LEFT, buff=0.15)
-        label_hat_p2 = MathTex(r"\hat p_2", color=WHITE).scale(0.6).next_to(hat_p2, DOWN, buff=0.15)
-        label_hat_p3 = MathTex(r"\hat p_3", color=WHITE).scale(0.6).next_to(hat_p3, RIGHT, buff=0.15)
-        label_hat_p4 = MathTex(r"\hat p_4", color=WHITE).scale(0.6).next_to(hat_p4, DOWN, buff=0.15)
-        label_hat_p5 = MathTex(r"\hat p_5", color=WHITE).scale(0.6).next_to(hat_p5, RIGHT, buff=0.15)
+        self.play(FadeIn(gt_path1))
 
-        self.play(
-            Write(label_hat_p1),
-            Write(label_hat_p2),
-            Write(label_hat_p3),
-            Write(label_hat_p4),
-            Write(label_hat_p5),
+        # ===== pi =====
+        p1 = MathTex(r"p_1").move_to(left_points[0][0]+0.2*UP+0.3*LEFT).scale(0.8)
+        p2 = MathTex(r"p_2").move_to(left_points[1][1]+0.3*DL).scale(0.8)
+        p3 = MathTex(r"p_3").move_to(left_points[3][1]+0.3*DL).scale(0.8)
+        p4 = MathTex(r"p_4").move_to(left_points[4][1]+0.3*DR).scale(0.8)
+        left_ps = VGroup(p1, p2, p3, p4)
+
+        # ===== pi points =====
+        left_dots = VGroup(
+            Dot(left_points[0][0], color=TEAL_A, fill_opacity=0.9, radius=0.1),
+            Dot(left_points[1][1], color=TEAL_A, fill_opacity=0.9, radius=0.1),
+            Dot(left_points[3][1], color=TEAL_A, fill_opacity=0.9, radius=0.1),
+            Dot(left_points[4][1], color=TEAL_A, fill_opacity=0.9, radius=0.1),
         )
+        self.play(FadeIn(left_dots))
+        self.play(Write(left_ps))
 
-        #
-        # 右: GT skeleton  P_g
-        #
         rp_origin = right_panel.get_center()
 
-        gt_main = VGroup(
-            Line(rp_origin + LEFT*1.7 + UP*0.6, rp_origin + LEFT*0.5 + UP*0.2, color=WHITE),
-            Line(rp_origin + LEFT*0.5 + UP*0.2, rp_origin + RIGHT*0.3 + UP*0.1, color=WHITE),
+        right_points = [
+            [rp_origin+UP*1.5, rp_origin+UP*0.6],
+            [rp_origin,rp_origin+LEFT+DOWN],
+            [rp_origin,rp_origin+DR*0.5],
+            [rp_origin+DR*0.5, rp_origin+DR*0.5+DOWN*0.5+LEFT*0.25],
+            [rp_origin+DR*0.5, rp_origin+DR*0.5+DOWN*0.5+RIGHT*0.25],
+            ]
+
+        gt_path1 = VGroup(
+            Line(points[0], points[1], color=WHITE) for points in right_points
         )
-        gt_vertical = Line(rp_origin + RIGHT*0.3 + UP*0.1, rp_origin + RIGHT*0.3 + DOWN*1.2, color=WHITE)
-        gt_diag = Line(rp_origin + RIGHT*0.3 + UP*0.1, rp_origin + RIGHT*1.9 + UP*0.9, color=WHITE)
 
-        gt_skel = VGroup(gt_main, gt_vertical, gt_diag)
-        self.play(Create(gt_skel))
+        self.play(FadeIn(gt_path1))
 
-        # GT endpoints: p_1, p_2, p_3
-        p1 = Dot(rp_origin + LEFT*1.7 + UP*0.6, color=TEAL)
-        p2 = Dot(rp_origin + RIGHT*1.9 + UP*0.9, color=TEAL)
-        p3 = Dot(rp_origin + RIGHT*0.3 + DOWN*1.2, color=TEAL)
+        # ===== pi =====
+        ph1 = MathTex(r"\hat p_1").move_to(right_points[0][0]+0.2*UP+0.3*LEFT).scale(0.8)
+        ph2 = MathTex(r"\hat p_2").move_to(right_points[0][1]+0.5*RIGHT).scale(0.8)
+        ph3 = MathTex(r"\hat p_3").move_to(right_points[1][0]+0.4*LEFT+0.1*UP).scale(0.8)
+        ph4 = MathTex(r"\hat p_4").move_to(right_points[1][1]+0.3*DL).scale(0.8)
+        ph5 = MathTex(r"\hat p_5").move_to(right_points[3][1]+0.3*DL).scale(0.8)
+        ph6 = MathTex(r"\hat p_6").move_to(right_points[4][1]+0.3*DR).scale(0.8)
+        right_ps = VGroup(ph1, ph2, ph3, ph4, ph5, ph6)
 
-        self.play(FadeIn(p1), FadeIn(p2), FadeIn(p3))
-
-        label_p1 = MathTex(r"p_1", color=WHITE).scale(0.6).next_to(p1, LEFT, buff=0.15)
-        label_p2 = MathTex(r"p_2", color=WHITE).scale(0.6).next_to(p2, RIGHT, buff=0.15)
-        label_p3 = MathTex(r"p_3", color=WHITE).scale(0.6).next_to(p3, RIGHT, buff=0.15)
-
-        self.play(Write(label_p1), Write(label_p2), Write(label_p3))
-
-        self.wait(2)
+        # ===== pi points =====
+        right_dots = VGroup(
+            Dot(right_points[0][0], color=MAROON_A, fill_opacity=0.9, radius=0.1),
+            Dot(right_points[1][1], color=MAROON_A, fill_opacity=0.9, radius=0.1),
+            Dot(right_points[3][1], color=MAROON_A, fill_opacity=0.9, radius=0.1),
+            Dot(right_points[4][1], color=MAROON_A, fill_opacity=0.9, radius=0.1),
+            Dot(right_points[0][1], color=MAROON_A, fill_opacity=0.9, radius=0.1),
+            Dot(right_points[1][0], color=MAROON_A, fill_opacity=0.9, radius=0.1),
+        )
+        self.play(FadeIn(right_dots))
+        self.play(Write(right_ps))

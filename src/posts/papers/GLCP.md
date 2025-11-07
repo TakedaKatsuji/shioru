@@ -53,7 +53,7 @@ cover: "/assets/images/papers/GLCP/thumbnail.png"
 |-----------|-----------|------|
 | **モデルベース** | 3, 15, 18, 26 | モデルレベルで管状構造の固有特性に適合させることを狙っているが、画像内の管状構造は本質的に疎であるため、これらの手法はそれらを正確に捕捉・描出するのにしばしば苦労する. |
 | **特徴量ベース** | 13, 7, 27, 17 | 追加の特徴表現をモデルに組み込むことで管状構造の幾何学的・位相的特性を捉えることを目的としているが、冗長な特徴表現によって性能と効率性が損なわれる可能性がある. |
-| **Lossベース** | 20, 11, 23, 19, 14, 28 | 環状構造のトポロジカルな連続性を強化するために様々な損失関数を導入しているが、局所的な不連続を無視
+| **Lossベース** | 20, 11, 23, 19, 14, 28 | 管状構造のトポロジカルな連続性を強化するために様々な損失関数を導入しているが、局所的な不連続を無視
 
 </div>
 
@@ -145,9 +145,70 @@ L_{con} = \mathrm{KL}(\sigma(\hat F_g)\otimes \hat S_g,\, \psi(\hat F_s)) +\math
 $$
 
 $\sigma(\cdot)$ はシグモイドやソフトマックスなどの確率化関数, $\psi(\cdot)$ は勾配のトランケーション
-$L_{con}$の解釈は ==**予測セグメンテーションマップから作成したスケルトンと予測スケルトンの分布が近づける一貫性損失**== と理解できます. カルバックライブラー距離が二つあるのはカルバックライブラー距離に対称性が無い為、両方向から距離を見ていることを表しています。
+$L_{con}$の解釈は ==**予測セグメンテーションマップから作成したスケルトンと予測スケルトンの分布が近づける一貫性損失**== と理解できます. カルバックライブラー距離が二つあるのはカルバックライブラー距離に対称性が無い為、両方向から距離を見ていることを表しています.
 
 ### Dual-Attention-based Refinement (DAR) 
+DARは三つのヘッドから出力された情報をもとにセグメンテーションマスクを精緻化するモジュールです.
+
+精緻化されたセグメンテーションマップは以下の式で定義されます。
+$$
+\begin{align}
+\hat F_r = H_c(\sigma(\hat F_s) \otimes H_r(\hat F_g) + \sigma(\hat F_d) \otimes H_r(\hat F_g) + H_r(\hat F_g))
+\end{align}
+$$
+
+$\hat F_d$はIMSで作成した予測不連続マップ, $H_r(\cdot), H_c(\cdot)$ は カーネルサイズ1の $\mathrm{Conv}$ です.
 
 
-執筆中...
+各項の役割は以下のとおりです．
+- $\sigma(\hat F_s) \otimes H_r(\hat F_g)$ : スケルトンに沿った領域を強調する「スケルトン注意」
+- $\sigma(\hat F_d) \otimes H_r(\hat F_g)$ : 断続が起きやすい局所領域を強調する「不連続注意」
+- $H_r(\hat F_g)$ : 元の予測セグメンテーション（残差成分）
+
+これらを足し合わせた後に $H_c(\cdot)$ でチャネルを整形して，最終出力 $\hat F_r$ としています．
+
+### 最終的な損失
+最終的な損失関数は以下で定義されます.
+
+$$
+\begin{align}
+L_{\mathrm{total}} = L_{\mathrm{IMS}} + \alpha L_{\mathrm{con}} + \beta L_{\mathrm{DAR}}
+\end{align}
+$$
+
+ここで，
+- $L_{\mathrm{IMS}}$ は IMS モジュールで出力された3つのタスク損失の和です．  
+  $$
+  L_{\mathrm{IMS}} = L_{\mathrm{seg}} + L_{\mathrm{dis}} + L_{\mathrm{ske}}
+  $$
+  それぞれ  
+  - $L_{\mathrm{seg}}$: セグメンテーション損失（nnUNetと同様のDice+CE）  
+  - $L_{\mathrm{dis}}$: 不連続マスクの損失  
+  - $L_{\mathrm{ske}}$: スケルトンマップの損失  
+
+- $L_{\mathrm{con}}$ はセグメンテーションとスケルトン間の一貫性を保つための整合性損失（Consistency Loss）です．  
+
+- $L_{\mathrm{DAR}}$ は DAR モジュールにおける精緻化後出力の損失であり，Cross Entropy（CE）損失が用いられます．  
+
+- $\alpha, \beta$ はそれぞれ $L_{\mathrm{con}}$ と $L_{\mathrm{DAR}}$ の重みを制御するハイパーパラメータです．  
+
+これにより，モデルは
+1. 各タスク（セグメンテーション・スケルトン・不連続）の個別最適化，
+2. タスク間の構造整合性の確保，
+3. DARによる精緻化結果の改善  
+を同時に学習できるよう設計されています．
+
+## 結果
+
+<div style="display: flex; gap: 10px; justify-content: center; padding-bottom: 20px; padding-top: 10px;">
+  <img src="/assets/images/papers/GLCP/result.png" style="max-width: 100%; height: auto;">
+</div>
+
+<div style="display: flex; gap: 10px; justify-content: center; padding-bottom: 20px; padding-top: 10px;">
+  <img src="/assets/images/papers/GLCP/table1.png" style="max-width: 100%; height: auto;">
+</div>
+
+## まとめ
+
+今回は管状構造セグメンテーションに特化した論文 ==**GLCP**== を紹介しました.
+特に連結性指標の大幅な改善があり、構造は非常にシンプルですが強力な手法であることがわかります.

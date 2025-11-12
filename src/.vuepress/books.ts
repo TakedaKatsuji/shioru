@@ -69,4 +69,12 @@ export const BOOKS: Record<string, Book> = {
     rakuten: "https://a.r10.to/hPUESu",
     desc: "微積分と線形代数の重要公式を背景と考え方から解説してある入門書です."
   },
+  proba2stat: {
+    title: "統計学への確率論,その先へ: ゼロからの測度論的理解と漸近理論への架け橋",
+    author: "清水 泰隆",
+    img: "https://m.media-amazon.com/images/I/61X3KFxOsSL._SY425_.jpg",
+    amazon: "https://amzn.to/48a3M35",
+    rakuten: "https://a.r10.to/h5ZlDX",
+    desc: "測度論に基づく確率論・統計学の入門書"
+  },
 }

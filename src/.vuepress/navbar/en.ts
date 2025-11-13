@@ -14,6 +14,7 @@ export const enNavbar: NavbarOptions = navbar([
         prefix: "grade1_1/",
         children: [
           { text: "2013", icon: "meteor-icons:folder",link: "2013/1.md"},
+          { text: "2012", icon: "meteor-icons:folder",link: "2012/1.md"},
         ],
       },
       {

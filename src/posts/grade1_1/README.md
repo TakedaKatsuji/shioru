@@ -45,3 +45,18 @@ cover: /assets/images/grade1_1/thumbnail.png
   link="/posts/grade1_1/2013/5.md"
 />
 </div>
+
+## 2012年
+
+<div style="display: flex; gap: 10px; justify-content: center;">
+  <img src="/assets/images/grade1_1/2012/thumbnail.png" style="max-width: 100%; height: auto;">
+</div>
+<div class="vp-card-container">
+
+<VPCard
+  title="統計数理 [1]"
+  desc="一様分布の順序統計量"
+  link="/posts/grade1_1/2012/1.md"
+/>
+
+</div>

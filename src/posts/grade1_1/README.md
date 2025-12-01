@@ -59,4 +59,10 @@ cover: /assets/images/grade1_1/thumbnail.png
   link="/posts/grade1_1/2012/1.md"
 />
 
+<VPCard
+  title="統計数理 [2]"
+  desc="カイ二乗分布の性質"
+  link="/posts/grade1_1/2012/2.md"
+/>
+
 </div>

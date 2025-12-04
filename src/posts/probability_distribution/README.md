@@ -69,6 +69,23 @@ cover: /assets/images/probability_distribution/thumbnail.png
 
 </div>
 
+## 推定論
+
+<div class="vp-card-container">
+
+<VPCard
+  title="スコア関数"
+  desc="スコア関数の導出と性質"
+  link="/posts/probability_distribution/score.html"
+/>
+<VPCard
+  title="フィッシャー情報量"
+  desc="フィッシャー情報量の導出と性質"
+  link="/posts/probability_distribution/fisher_info.html"
+/>
+
+</div>
+
 ## 極限定理
 <div class="vp-card-container">
 

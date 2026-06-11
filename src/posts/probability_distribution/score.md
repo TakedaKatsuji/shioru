@@ -65,3 +65,7 @@ $$
 \end{align}
 $$
 :::
+
+## 参考文献
+<AffiliateBook id="official1"/>
+<AffiliateBook id="takemura_gen_stats"/>
